@@ -2191,6 +2191,24 @@ if (!isRegister) return samu330.sendMessage(from, notreg, MessageType.text, { qu
 addFilter(from)
 addLevelingXp(sender, 20)
 break
+		
+case 'prueba':
+const buttons = [
+  {buttonId: 'id1', buttonText: {displayText: 'TeslaGod'}, type: 1},
+  {buttonId: 'id2', buttonText: {displayText: 'UwU'}, type: 1}
+]
+
+const buttonMessage = {
+    contentText: "Hola!!! :3",
+    footerText: 'Otakus Tecnologicos',
+    buttons: buttons,
+    headerType: 1
+}
+
+const sendMsg1 = await samu330.sendMessage(from, buttonMessage, MessageType.buttonsMessage)
+reply(sendMsg1)
+break
+		
 /**
 case 'megu':
 addFilter(from)	
@@ -4492,15 +4510,13 @@ reply(ini_txt)
 addFilter(from)
 addLevelingXp(sender, 20)
 break
-/**		
+		
 case 'traductor':
 if (!isGroup) return reply(mess.only.group)
-arg1 = q
-if (!arg1) return reply(`Ejemplo ${prefix}spam es|Fuck you`)
-argz = arg1.split("|")
-if (!argz) return reply(`Porfavor usa el simbolo "|" para dividir`)
-kode_negara = argz[0].trim()
-ini_txt = argz[1].trim()
+if (args.length == 0) return reply(`Ejemplo de uso : ${prefix}traductor es hi friend`)
+kode_negara = args[0]
+args.shift()
+ini_txt = args.join(" ")
 get_result = await getJson(`http://api.lolhuman.xyz/api/translate/auto/${kode_negara}?apikey=NikolaTesla&text=${ini_txt}`)
 get_result = get_result.result
 init_txt = `Prefijo del idioma detectado : ${get_result.from}\n`
@@ -4510,7 +4526,7 @@ init_txt += `Traducido : ${get_result.translated}\n`
 init_txt += `Pronunciacion : ${get_result.pronunciation}\n`
 reply(init_txt)
 break
-**/		
+		
 case 'idiomas':
 reply(`*Estos son los idiomas soportados por la voz👇🏻*:
 
