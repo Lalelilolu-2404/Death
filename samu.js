@@ -2011,7 +2011,7 @@ key:
 { fromMe: false,
 participant: `0@s.whatsapp.net`, ...(from ?
 { remoteJid: "status@broadcast" } : {}) },
-message: { "videoMessage": { "caption":"Lalelilolu ᵈᵃʳʸ⛥\n...\n..\n.", 'jpegThumbnail': 
+message: { "videoMessage": { "caption":`Lalelilolu ᵈᵃʳʸ⛥\n${pushname}`, 'jpegThumbnail': 
 			    fs.readFileSync('./src/fake.jpg')}}
 }
 
@@ -4413,7 +4413,7 @@ case 'reglas':
 samu330.updatePresence(from, Presence.composing)  		
 mdata = await samu330.groupMetadata(from)
 reply(`_*「 Hola, @${pushname} 」*_\n_*Bienvenido a 「 ${mdata.subject} 」*_\n\n_*Estas son la reglas para el uso del Bot :*_\n\n1- No hablar ni pedir comandos en privado, al Bot.\n2- _*❌No hagas spam de comandos❌*_\nEsto es enserio, el Bot puede saturarse y desconectarse.\n3- _*📵No hagas llamadas al BOT📵*_\nSerás bloqueado inmediatamente.\n4- _🕐Espera el tiempo nesesario cuando pidas alguna funcion. 
-Ya que algunas tardan en realizarse._\n\n5- _*IMPORTANTE!!!*_\nEscribe bien los commandos : *${prefix}comando (Ningún espacio entre el prefijo y el comando en minúscula)*_\n\n*Lee bien las reglas y cúmplelas, no te quieras pasar de pendejo o serás baneado del uso de BOT.*`)
+Ya que algunas tardan en realizarse.\n\n5- _*IMPORTANTE!!!*_\nEscribe bien los commandos : *${prefix}comando*\n*(Ningún espacio entre el prefijo y el comando en minúscula)*\n\n*Lee bien las reglas y cúmplelas, no te quieras pasar de pendejo o serás baneado del uso de BOT.*`)
 break
 case 'rules':
 samu330.updatePresence(from, Presence.composing)  		
