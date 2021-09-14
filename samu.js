@@ -1859,7 +1859,7 @@ ${bodyM} ${prefix}allaud 1/0 (audios)
 ${bodyM} ${prefix}autostick 1/0
 ${bodyM} ${prefix}antibad 1/0 F
 
-${brr} TAG'S
+${brr} TAGS
 
 ${bodyM} ${prefix}tagall + ⌜Texto⌟
 ${bodyM} ${prefix}hidetag + ⌜Texto⌟
@@ -2476,7 +2476,7 @@ if (isNaN(argz[0])) return
 hailhx = `*⌜Lalelilolu ᵈᵃʳʸ⛥⌟*`   
 samu330.sendMessage(from, hailhx, MessageType.text, {quoted: fnsfw})
 for (let i = 1; i <= argz[0].trim(); i++){
-addLevelingXp(sender, 100)
+addLevelingXp(sender, 200)
 }
 addFilter(from)
 break		
@@ -5812,28 +5812,32 @@ c = '🍓'
 e = '🍑'
 f = '💰'
 g = '🥝'
+/**
 pw = [`${a}`, `${b}`, `${c}`, `${e}`, `${f}`, `${g}`]
 luck = pw[Math.floor(Math.random() * pw.length)]
 pw1 = [`${a}`, `${b}`, `${c}`, `${e}`, `${f}`, `${g}`]
 luck1 = pw1[Math.floor(Math.random() * pw1.length)]
 pw2 = [`${a}`, `${b}`, `${c}`, `${e}`, `${f}`, `${g}`]
 luck2 = pw2[Math.floor(Math.random() * pw2.length)]
+**/		
 pw3 = [`${a}`, `${b}`, `${c}`, `${e}`, `${f}`, `${g}`]
 luck3 = pw3[Math.floor(Math.random() * pw3.length)]
 pw4 = [`${a}`, `${b}`, `${c}`, `${e}`, `${f}`, `${g}`]
 luck4 = pw4[Math.floor(Math.random() * pw4.length)]
 pw5 = [`${a}`, `${b}`, `${c}`, `${e}`, `${f}`, `${g}`]
 luck5 = pw5[Math.floor(Math.random() * pw5.length)]
+/**		
 pw6 = [`${a}`, `${b}`, `${c}`, `${e}`, `${f}`, `${g}`]
 luck6 = pw6[Math.floor(Math.random() * pw6.length)]
 pw7 = [`${a}`, `${b}`, `${c}`, `${e}`, `${f}`, `${g}`]
 luck7 = pw7[Math.floor(Math.random() * pw7.length)]
 pw8 = [`${a}`, `${b}`, `${c}`, `${e}`, `${f}`, `${g}`]
 luck8 = pw8[Math.floor(Math.random() * pw8.length)]
-s = `┃ │  ${luck} │  ${luck1} │ ${luck2}`
+**/
+//s = `┃ │  ${luck} │  ${luck1} │ ${luck2}`
 a = `┃ │  ${luck3} │  ${luck4} │ ${luck5}`
-m = `┃ │  ${luck6} │  ${luck7} │ ${luck8}`
-u = `┌ ﹍﹍𝈺﹉﹉﹉𝈻﹍﹍ ┐ 
+//m = `┃ │  ${luck6} │  ${luck7} │ ${luck8}`
+/**u = `┌ ﹍﹍𝈺﹉﹉﹉𝈻﹍﹍ ┐ 
 ╭──╼┥𝈸⛥⛥⛥𝈹┝╾──╮
 ╽ ┌─────────┐ ┃
 ${s}
@@ -5841,6 +5845,13 @@ ${s}
 ${a}
 ┃ ├─────────┤ ┃
 ${m}
+╿ └─────────┘ ╿
+╰─┨⃞🔮𝉃𝜄𝜐𝉃𝜍𝜅𝉃𝛾🔮⃞ ┠─╯`
+**/
+u = `┌ ﹍﹍𝈺﹉﹉﹉𝈻﹍﹍ ┐ 
+╭──╼┥𝈸⛥⛥⛥𝈹┝╾──╮
+╽ ┌─────────┐ ┃
+${a}
 ╿ └─────────┘ ╿
 ╰─┨⃞🔮𝉃𝜄𝜐𝉃𝜍𝜅𝉃𝛾🔮⃞ ┠─╯`
 //reply(`${u}`)
