@@ -1722,7 +1722,7 @@ break
 
 case 'forme':
 const morestickx = ["Abasho", "Lean las reglas", "Nel mijo", "Se la coge", "Soy inevitable", "Le mete el brazo", 
-		  "Fbi", "X el chikito", "Xd", "Comida de Anna", "Nel pastel", "Despreciox"]		
+		  "Fbi", "X el chikito", "Xd", "Comida de Anna", "Nel pastel", "Despreciox", "Se relaja", "Colitax"]		
 const onlyme = ["69", "Ahohsi", "Alto", "A mira nomás", "A2", "Abrazo", "Ah ok", "Ahh", "Amistad", "Anna", "Amm", "Anni", "Así me gusta", "Asustado", "Ay caramba", "Ay me asusté", 
 		"Ban", "Báñate", "Besos", "Bien", "Bragas", "Buen culo", "Buenas noches", "Bye", "C rasca", "Cállate", "Cc", "Chelitas", "Chongo", "Colita", "Colitaxxx", 
 		"Contesta", "Contra el muro", "Ctm", "Cunni", "Dame", "Delito", "Depre", "Doncon", "Duren", "En fin", "Encuérate", "Eres bonita", "F el grupo", "F en el chat", 
@@ -2366,7 +2366,7 @@ ftgay = await getBuffer(`https://pecundang.herokuapp.com/api/gay?url=${txtg}`)
 					
 //const hasil = `⊱ღ @${mentioned[0].split('@')[0]} ღ⊱\n\n➥${random}% gay \n✪\n➥${ga}\n\n@${sender.replace("@s.whatsapp.net", "")}`
 const hasil = `⊱ღ @${mentioned[0].split('@')[0]} ღ⊱\n\n➥${random}% gay \n✪\n➥${ga}`
-samu330.sendMessage(from, ftgay, MessageType.image, {
+samu330.sendMessage(from, fgay, MessageType.image, {
 quoted: fgay, 
 //caption: `${hasil}\n${pushname}`, 
 caption: `${hasil}`, 
@@ -7537,7 +7537,7 @@ if (isAllaud) {
 		}
 	} 
 	if (body.includes(`Comida de Anna`) && body.length == 14){
-		randc = Math.floor(Math.random() * 5)
+		randc = Math.floor(Math.random() * 6)
 		none2 = fs.readFileSync(`./src/stickers2/Comida de Anna${randc}.webp`)
 		samu330.sendMessage(from, none2, sticker, {quoted: sam})
 	} 
@@ -7602,7 +7602,7 @@ if (!isAllaud) return
 }
 //////////////	
 const morestick = ["Abasho", "Lean las reglas", "Nel mijo", "Se la coge", "Soy inevitable", "Le mete el brazo", 
-		  "Fbi", "X el chikito", "Nel pastel", "Desprecio1", "Desprecio2", "Desprecio3"]	
+		  "Fbi", "X el chikito", "Nel pastel", "Desprecio1", "Desprecio2", "Desprecio3", "Se relaja", "Colitax"]	
 
 if (isLalelilolu){
 if (!isAllaud) return
