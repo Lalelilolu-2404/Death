@@ -2055,7 +2055,7 @@ break
 				
 case 'givemoney':
 if (!isGroup) return reply(mess.only.group)
-if (!isRegister) return samu330.sendMessage(from, notreg, MessageType.text, { quoted: noreg})
+if (!isUser2) return reply('Use 1st el comando work')
 if (args.length < 1) return reply("Mentiona a alguien, pajero!")	
 samu330.updatePresence(from, Presence.composing) 
 arg1 = q
@@ -2081,7 +2081,7 @@ break
 			
 case 'balance':
 if (!isGroup) return reply(mess.only.group)
-if (!isRegister) return samu330.sendMessage(from, notreg, MessageType.text, { quoted: noreg})
+if (!isUser2) return reply('Use 1st el comando work')
 samu330.updatePresence(from, Presence.composing)  
 const kantong = checkATMuser(sender)
 hailhy = `*⌜${pushname}⌟*\n★᭄ꦿ Posees ${kantong} Otakoins`   
@@ -2093,9 +2093,9 @@ break
 		
 case 'apostar':
 const gpp = ['10','90','10','10','90','10','10','90','10','10']
-samu330.updatePresence(from, Presence.composing)  
 if (!isGroup) return reply(mess.only.group)
-if (!isRegister) return samu330.sendMessage(from, notreg, MessageType.text, { quoted: noreg})
+if (!isUser2) return reply('Use 1st el comando work')
+samu330.updatePresence(from, Presence.composing)  
 arg1 = q
 if (!arg1) return reply(`Ejemplo ${prefix}apostar ***\nGanas o pierdes Otakoins`)
 argz = arg1.split("|")
