@@ -14,7 +14,7 @@ echo -e '\e[1;32m
                                                        
 \e[0m\e[1;33m
  ____                                         
-/\  _`\      \e[0m\e[1;36mNyanBot By\e[0m\e[1;33m                                 
+/\  _`\      \e[0m\e[1;36mDeath By\e[0m\e[1;33m                                 
 \ \,\L\_\      __       ___ ___     __  __    
  \/_\__ \    /`__`\   /` __` __`\  /\ \/\ \   
    /\ \L\ \ /\ \L\.\_ /\ \/\ \/\ \ \ \ \_\ \  
@@ -125,7 +125,7 @@ cd usr
 cd etc
 rm -r bash.bashrc
 cd
-cd NyanBot
+cd Death
 mv bash.bashrc $HOME/../usr/etc
 echo -e '\033[0m\033[1;33m
    ____                         _                                        
