@@ -2211,6 +2211,14 @@ const buttonMessage = {
 const sendMsg1 = await samu330.sendMessage(from, buttonMessage, MessageType.buttonsMessage)
 reply(sendMsg1)
 break
+	
+case 'kill':
+sus = `⚠️!! @${sender.split('@')[0]} was killed!!`
+k = Math.floor(Math.random() * 17) + 1
+imgkill = fs.readFileSync(`./temp/amongus/kill${k}.JPG`)
+samu330.sendMessage(from, {jpegThumbnail: imgkill}, MessageType.liveLocation,{ quoted: fjeux})
+samu330.sendMessage(from,`${sus}`, MessageType.text, {contexInfo: { mentionedJid: [sender]}})
+break
 		
 /**
 case 'megu':
