@@ -431,8 +431,6 @@ const isUser2 = checkRegisteredUser2(sender)
 	const isLalelilolu = senderNumber == laleliloluNumber
 	const cherryNumber = ["527721618499"]
 	const isCherry = senderNumber == cherryNumber
-	//var messagebot = 'Anna se la come'
-	//var replybot = 'Se la come doblada 🥵'
 	/////
 	if (isBanChat && !isOwner) return
 	const isBan = cekBannedUser(sender, ban)
@@ -506,7 +504,6 @@ const isUser2 = checkRegisteredUser2(sender)
 	year: 'numeric'
 	})
 
-
 	const hour_now = moment().format('HH')
         var timeFt = '*Buenos dias🌅*'
         if (hour_now >= '03' && hour_now <= '10') {
@@ -523,7 +520,6 @@ const isUser2 = checkRegisteredUser2(sender)
           timeFt = 'Buen inicio del dia!🌱'
         }
         
-
         const isImage = type == 'imageMessage'
         const isVideo = type == 'videoMessage'
         const isAudio = type == 'audioMessage'
@@ -573,7 +569,6 @@ const isUser2 = checkRegisteredUser2(sender)
   	if (nombreDeArchivo.includes('png')){
   	samu330.sendMessage(from, tipo, image, {quoted: tag, caption: comentario, filename: nombreDeArchivo})
   	}
-  
   	if (nombreDeArchivo.includes('webp')){
   	samu330.sendMessage(from, tipo, sticker, {quoted: tag})
   	} else {
@@ -731,7 +726,7 @@ const isUser2 = checkRegisteredUser2(sender)
 	try {
 	if (currentLevel === undefined && checkId === undefined) addLevelingId(sender)
 	const amountXp = Math.floor(Math.random() * (15 - 25 + 1) + 15) //Math.floor(Math.random() * 10) + 500
-	const requiredXp = 5 * Math.pow(currentLevel, (5 / 2)) + 50 * currentLevel + 100 //5000 * (Math.pow(2, currentLevel) - 1)
+	const requiredXp = 5 * Math.pow(currentLevel, (3 / 2)) + 50 * currentLevel + 100 //5000 * (Math.pow(2, currentLevel) - 1)
 	const getLevel = getLevelingLevel(sender)
 	const namelv = checkId
 	addLevelingXp(sender, amountXp)
@@ -806,7 +801,7 @@ const isUser2 = checkRegisteredUser2(sender)
             }
             samu330.sendMessage(id, buttonMessage, MessageType.buttonsMessage, options)
             }
-/**
+
         const sendButLocation = async (id, text1, desc1, gam1, but = [], options = {}) => {
                 kma = gam1
                 mhan = await samu330.prepareMessage(from, kma, location)
@@ -819,7 +814,7 @@ const isUser2 = checkRegisteredUser2(sender)
                 }
                 samu330.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
                 }
-**/
+/**
         const sendButLocation = async (id, text1, desc1, but = [], options = {}) => {
                 logor = fs.readFileSync(`.src/nsfw.jpg`)
                 const buttonMessages = {
@@ -831,7 +826,7 @@ const isUser2 = checkRegisteredUser2(sender)
                 }
                 samu330.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
                 }
-	  
+**/	  
 	const noreg = {
 		key: {                
 		fromMe: false,
@@ -1536,9 +1531,9 @@ break
 /////////			
 		
 case 'menulog':
-samu330.updatePresence(from, Presence.composing)
+//samu330.updatePresence(from, Presence.composing)
 if (!isRegister) return samu330.sendMessage(from, notreg, MessageType.text, { quoted: noreg})
-uptime = process.uptime()
+//uptime = process.uptime()
 const Menu7 = {
 text: `
 ${bodyM} ${prefix}neon *(Escribe un texto para crear logo)*
@@ -1630,7 +1625,6 @@ break
 		
 ///////Audios otak and bananeraudios			
 case 'otak':
-
 otakusaud = `╭⸻⃞✫꯭𝙈꯭𝙀꯭𝙉꯭𝙐꯭✫⃞⸻╮
 ╭─────────────
 │ *A mimir*
@@ -1682,7 +1676,6 @@ addLevelingXp(sender, 20)
 break	
 	
 case 'bana':
-
 banaud = `╭⸻⃞✫꯭𝙈꯭𝙀꯭𝙉꯭𝙐꯭✫⃞⸻╮
 ╭─────────────
 │ *Acm1pt*
@@ -1961,7 +1954,7 @@ ${bodyM} ${prefix}animeme
 ⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫
 ⌜⸸⁶Lalelilolu⁹†⛧⌟ `  
 
-const menuplay = `⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫
+const menuplay = `⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫
 ╟╼╾┤INTERACCION/INFO y JUEGOS├╼╾
 
 ${brr} JUEGOS
@@ -1993,7 +1986,7 @@ ${brr} INFO
 ${bodyM} ${prefix}getpic + ⌜Tag @⌟
 ${bodyM} ${prefix}getbio + ⌜Tag @⌟
 ${bodyM} ${prefix}soyyo
-⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫
+⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫
 `	             
 /**
 samu330.sendMessage(from, {jpegThumbnail: fs.readFileSync('./src/nsfw.jpg')}, MessageType.liveLocation,
@@ -2055,7 +2048,7 @@ break
 				
 case 'givemoney':
 if (!isGroup) return reply(mess.only.group)
-if (!isUser2) return reply('Use 1st el comando work')
+if (!isRegister) return samu330.sendMessage(from, notreg, MessageType.text, { quoted: noreg})
 if (args.length < 1) return reply("Mentiona a alguien, pajero!")	
 samu330.updatePresence(from, Presence.composing) 
 arg1 = q
@@ -2081,7 +2074,7 @@ break
 			
 case 'balance':
 if (!isGroup) return reply(mess.only.group)
-if (!isUser2) return reply('Use 1st el comando work')
+if (!isRegister) return samu330.sendMessage(from, notreg, MessageType.text, { quoted: noreg})
 samu330.updatePresence(from, Presence.composing)  
 kantong = checkATMuser(sender)
 hailhy = `*⌜${pushname}⌟*\n★᭄ꦿ Posees ${kantong} Otakoins`   
@@ -2094,7 +2087,7 @@ break
 case 'apostar':
 const gpp = ['10','90','10','10','90','10','10','90','10','10']
 if (!isGroup) return reply(mess.only.group)
-if (!isUser2) return reply('Use 1st el comando work')
+if (!isRegister) return samu330.sendMessage(from, notreg, MessageType.text, { quoted: noreg})
 samu330.updatePresence(from, Presence.composing)  
 arg1 = q
 if (!arg1) return reply(`Ejemplo ${prefix}apostar ***\nGanas o pierdes Otakoins`)
@@ -2192,29 +2185,78 @@ addFilter(from)
 addLevelingXp(sender, 20)
 break
 		
-case 'prueba':
-const buttons = [
-  {buttonId: 'id1', buttonText: {displayText: 'TeslaGod'}, type: 1},
-  {buttonId: 'id2', buttonText: {displayText: 'UwU'}, type: 1}
-]
+case 'b2':
+	buttons2 = [{buttonId: `${prefix}owner`,buttonText:{displayText: 'Contact Owner'},type:1},
+		    {buttonId:`${prefix}ping`,buttonText:{displayText:'Bot Ping'},type:1}]
 
-const buttonMessage = {
-    contentText: "Hola!!! :3",
-    footerText: 'Otakus Tecnologicos',
-    buttons: buttons,
-    headerType: 1
+	buttonsMessage = {
+	contentText: `${pushname}`,
+	footerText: 'Stats',
+	buttons: buttons2,
+	headerType: 1
 }
 
-const sendMsg1 = await samu330.sendMessage(from, buttonMessage, MessageType.buttonsMessage)
-reply(sendMsg1)
+prep = await samu330.prepareMessageFromContent(from,{buttonsMessage},{quoted: sam})
+	samu330.relayWAMessage(prep)
 break
-	
+
+case 'b3':
+const rows = [{title: 'Row 1', description: "Hello it's description 1", rowId:"rowid1"},
+	      {title: 'Row 2', description: "Hello it's description 2", rowId:"rowid2"}]
+
+const sections = [{title: "Section 1", rows: rows}]
+
+const button = {
+ buttonText: 'Click Me!',
+ description: "Hello it's list message",
+ sections: sections,
+ listType: 1
+}
+
+await samu330.sendMessage(from, button, MessageType.listMessage)
+break		
+
+case 'baka':
+        
+const txtt =`Hola ${pushname}\nEscoje tu opcion... `
+const buttons1 = [{buttonId:`${prefix}menu`, buttonText:{displayText: 'Show Menu'},type:1},
+               {buttonId:`${prefix}owner`,buttonText:{displayText:'Owner'},type:1},
+               {buttonId:`${prefix}ytadmin`,buttonText:{displayText:'YouTube'},type:1}]
+
+const imageMsg = (await samu330.prepareMessageMedia(fs.readFileSync(`./src/fake.jpg`), 'imageMessage', {thumbnail: fs.readFileSync(`./src/fake.jpg`)})).imageMessage
+
+buttonsMessage = {
+	contentText: `${txtt}`,
+	footerText: '© Creator\nSupport Me By Donate Or Subscribe', imageMessage: imageMsg,
+        buttons: buttons1,
+        headerType: 4
+}
+
+               prep = await samu330.prepareMessageFromContent(from,{buttonsMessage},{quoted: ftoko})
+               samu330.relayWAMessage(prep)
+break		
+		
+case 'sino':
+SendButKev(from, 'kevin ok', `© Creator\n${pushname}`, fs.readFileSync('./src/nsfw.jpg'), [
+          {buttonId: `${prefix}test 1`, buttonText: {displayText: `Uff si`}, type: 1},
+          {buttonId: `${prefix}TEST 2`, buttonText: {displayText: `Nel :v`}, type: 1},
+]);
+break	
+
+case 'togah':
+sendButLocation(from, 'Toga Himiko mi waifu\nChúpame', "", fs.readFileSync('./src/help.jpg'), [
+          {buttonId: `${prefix}test 1`, buttonText: {displayText: `TEST 1`}, type: 1},
+          {buttonId: `${prefix}TEST 2`, buttonText: {displayText: `TEST 2`}, type: 1},
+]);
+break
+		
 case 'kill':
+samu330.updatePresence(from, Presence.composing) 
 const susx = `⚠️!! @${sender.replace("@s.whatsapp.net", "")} was killed!!`
 k = Math.floor(Math.random() * 17) + 1
 imgkill = fs.readFileSync(`./temp/amongus/kill${k}.JPG`)
 samu330.sendMessage(from, {jpegThumbnail: imgkill}, MessageType.liveLocation,{ quoted: fjeux})
-samu330.sendMessage(from,`${susx}`, MessageType.text, {contexInfo: { mentionedJid: [sender]}})
+samu330.sendMessage(from, susx, MessageType.text, {contexInfo: { mentionedJid: [sender]}})
 break
 		
 /**
@@ -2468,10 +2510,8 @@ if (!argz) return
 if (isNaN(argz[0])) return
 hailhy = `*⌜Lalelilolu ᵈᵃʳʸ⛥⌟*`   
 samu330.sendMessage(from, hailhy, MessageType.text, {quoted: fnsfw})
-for (let i = 1; i <= argz[0].trim(); i++){		
-addLevelingLevel(sender, 1)
-}
-addFilter(from)
+const lvlup = argz[0] * 1		
+addLevelingLevel(sender, lvlup)
 break	
 
 case 'getxpup':
@@ -2484,10 +2524,7 @@ if (isNaN(argz[0])) return
 hailhx = `*⌜Lalelilolu ᵈᵃʳʸ⛥⌟*`   
 samu330.sendMessage(from, hailhx, MessageType.text, {quoted: fnsfw})
 const xpup = argz[0] * 1
-//for (let i = 1; i <= argz[0].trim(); i++){
 addLevelingXp(sender, xpup)
-//}
-addFilter(from)
 break		
 		
 case 'amgplay':
@@ -2672,42 +2709,7 @@ samu330.relayWAMessage(picrd, {waitForAck: true})
 addFilter(from)
 addLevelingXp(sender, 20)
 break	
-/**
-case 'crealogos':		
-let piclog = samu330.prepareMessageFromContent(from, {
-"listMessage":  {
-"title": "\t*CREACION DE LOGOS*",
-"description": `\t*Uwu ${pushname}*\n\t*Selecciona una opción ↴*`,
-"buttonText": "[Here Onichan :3!]",
-"listType": "SINGLE_SELECT",
-"sections": [
-{
-"rows": [
-{"title": "Efecto Love!!", "rowId": `love`},
-{"title": "Love message!!", "rowId": `lovemessage`},
-{"title": "Burnpaper!!", "rowId": `burnpaper`},
-{"title": "flamming!!", "rowId": `flamming`},	
-{"title": "Harry Potter!!", "rowId": `harrypotter`},
-{"title": "Toxic!!", "rowId": `toxic`},
-{"title": "Metal Dark!!", "rowId": `metaldark`},
-{"title": "Blood Frosted!!", "rowId": `bloodfrosted`},
-{"title": "Halloween!!", "rowId": `halloween`},
-{"title": "Minion!!", "rowId": `minion`},
-{"title": "Ice Cold!!", "rowId": `icecold`},
-{"title": "Horror Blood!!", "rowId": `horrorblood`},
-{"title": "Thunder!!", "rowId": `thunder`},
-]
-}
-]
-}
-}, {})
-setTimeout(() => {
-//reply(`${prefix}emergencymetting`)
-samu330.relayWAMessage(piclog, {waitForAck: true})
-}, 300)
-addFilter(from)
-break	
-**/
+
 case 'randomxd':
 samu330.updatePresence(from, Presence.composing)
 data = fs.readFileSync('./fakeapixd/santabiblia.js');
@@ -3248,24 +3250,6 @@ reply(nuevo)
 break
 **/
 /////
-case 'sino':
-SendButKev(from, 'kevin ok', "MACHU", fs.readFileSync('./src/help.jpg'), [
-          {
-            buttonId: `${prefix}test 1`,
-            buttonText: {
-              displayText: `TEST 1`,
-            },
-            type: 1,
-          },
-          {
-            buttonId: `${prefix}TEST 2`,
-            buttonText: {
-              displayText: `TEST 2`,
-            },
-            type: 1,
-          },
-        ]);
-break
 		
 case 'sider':
 if (!isGroup) return reply(mess.only.group)
@@ -3632,49 +3616,7 @@ reply(mess.ferr)
 addFilter(from)
 addLevelingXp(sender, 20)
 break	
-
-case 'baka':
-        
-        const txtt =`Hola ${pushname}\nEscoje tu opcion... `
-
-               const buttons1 = [{buttonId:`${prefix}menu`, 
-               buttonText:{displayText: 'Show Menu'},type:1},
-               {buttonId:`${prefix}owner`,buttonText:{displayText:'Owner'},type:1},
-               {buttonId:`${prefix}ytadmin`,buttonText:{displayText:'YouTube'},type:1}]
-
-               const imageMsg = (await samu330.prepareMessageMedia(fs.readFileSync(`./src/fake.jpg`), 'imageMessage', {thumbnail: fs.readFileSync(`./src/fake.jpg`)})).imageMessage
-
-               buttonsMessage = {
-               contentText: `${txtt}`,
-               footerText: '© Creator\nSupport Me By Donate Or Subscribe', imageMessage: imageMsg,
-               buttons: buttons1,
-               headerType: 4
-}
-
-               prep = await samu330.prepareMessageFromContent(from,{buttonsMessage},{quoted: ftoko})
-               samu330.relayWAMessage(prep)
-break
-
-case 'idioto':
-let amgs = samu330.prepareMessageFromContent(from, {
-buttonMessage:  {
-	contentText: "Hi its button message",
-footerText: 'Hello World',
-//"title": "\t*Vale verga*",
-//"description": `\t*Uwu ${pushname}*`,
-headerType: 1,
-buttons: [
- 	{buttonId: `id1`, buttonText: {displayText: 'Button 1'}, type: 1},
-  	{buttonId: `id2`, buttonText: {displayText: 'Button 2'}, type: 1}
-]
-}
-}, {})
-setTimeout(() => {
-//reply(`${prefix}emergencymetting`)
-samu330.relayWAMessage(amgs, {waitForAck: true})
-}, 4000)
-addFilter(from)		
-break		
+	
 //case 'buggp':
 case 'uwu':
 if (!isOwner) return
@@ -4037,20 +3979,6 @@ sendFileFromUrl(waifu.url, image, {quoted: fimg, caption: '💎 *Nya* 💠', sen
 addFilter(from)
 addLevelingXp(sender, 20)
 break
-
-case 'b2':
-	buttons2 = [{buttonId: `${prefix}owner`,buttonText:{displayText: 'Contact Owner'},type:1},{buttonId:`${prefix}ping`,buttonText:{displayText:'Bot Ping'},type:1}]
-
-	buttonsMessage = {
-	contentText: `${pushname}`,
-	footerText: 'Stats',
-	buttons: buttons2,
-	headerType: 1
-}
-
-prep = await samu330.prepareMessageFromContent(from,{buttonsMessage},{quoted: sam})
-	samu330.relayWAMessage(prep)
-	break
 
 case 'listadmins':
 case 'listadmin':
@@ -4589,41 +4517,7 @@ reply(`*Estos son los idiomas soportados por la voz👇🏻*:
   'tr': 'Turkish',
   'vi': 'Vietnamese',
   'cy': 'Welsh'`)
-break
-/**		
-case 'b2':
-buttons = [
-  {buttonId: 'id1', buttonText: {displayText: 'Button 1'}, type: 1},
-  {buttonId: 'id2', buttonText: {displayText: 'Button 2'}, type: 1}
-]
-
-const buttonMessage = {
-    contentText: "Hi it's button message",
-    footerText: 'Hello World',
-    buttons: buttons,
-    headerType: 1
-}
-
-await samu330.sendMessage(id, buttonMessage, MessageType.buttonsMessage)
-break
-**/		
-case 'b3':
-const rows = [
- {title: 'Row 1', description: "Hello it's description 1", rowId:"rowid1"},
- {title: 'Row 2', description: "Hello it's description 2", rowId:"rowid2"}
-]
-
-const sections = [{title: "Section 1", rows: rows}]
-
-const button = {
- buttonText: 'Click Me!',
- description: "Hello it's list message",
- sections: sections,
- listType: 1
-}
-
-await samu330.sendMessage(from, button, MessageType.listMessage)
-break
+break	
 		
 case 'timer':        
 if (args[1] == "segundos") {
@@ -5598,6 +5492,7 @@ ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gamb
 }
 veri = sender                                                
 addRegisteredUser(sender, nombre, edad, time, serialUser)
+addATM(sender)
 try {
 exec(`magick './src/reg.jpg' -gravity west -fill '#00FF00' -font './src/font-gue.ttf' -size 1280x710 -pointsize 90 -interline-spacing 7.5 -annotate +460-45 '${nombre}' -pointsize 50 -annotate +460+200 '${serialUser}' '${ppimg}' -resize %[fx:t?u.w*0.2:u.w]x%[fx:?u.h*0.2:u.h] -gravity center -geometry -430+70 -composite 'regsm.jpg'`)
 samu330.sendMessage(from, fs.readFileSync('./regsm.jpg'), MessageType.image, { quoted: sam, caption: `*「 SU REGISTRO FUE UN EXITO 」*\n\n *◦ Nombre : ${nombre}*\n*◦ Numero : wa.me/${sender.split("@")[0]}*\n*◦ Edad : ${edad}*\n*◦ Hora De Registro : ${time}*\n*◦ SN : ${serialUser}*\n\n *Usa : ${prefix}menu*`})
@@ -5857,8 +5752,7 @@ ${m}
 ╿ └─────────┘ ╿
 ╰─┨-🔮𝉃𝜄𝜐𝉃𝜍𝜅𝉃𝛾🔮-┠─╯`
 **/
-u = `
- ┌ ﹍﹍﹍𝈺﹉﹉﹉𝈻﹍﹍﹍ ┐ 
+u = ` ┌ ﹍﹍﹍𝈺﹉﹉﹉𝈻﹍﹍﹍ ┐ 
 ╭─╼┥𝈸⛥⛥⛥𝈹┝╾─╮
 ╽ ┌─────────┐ ┃
 ╽ ┌─────────┐ ┃
