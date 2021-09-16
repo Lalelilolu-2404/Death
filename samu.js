@@ -2045,6 +2045,7 @@ const name = `${pushname}`
 //user2.push(sender)					
 //fs.writeFileSync('./src/user2.json', JSON.stringify(user2))
 addRegisteredUser2(sender, name)
+reply(`${sender}\n${name}`)
 taxg = Math.floor(Math.random() * 800) + 1500
 addKoinUser(sender, taxg)
 reply(`Recibiste ${taxg} Otakoins`)
@@ -2065,7 +2066,7 @@ if (!arg1) return reply(`Ej. ${prefix}givemoney @Tag | Monto a transferir`)
 argz = arg1.split("|")
 if (isNaN(argz[1])) return reply(`Indica el monto a transferir!`)
 if (argz[1] < 100 ) return reply(`Transferencia mínima de 100`)
-const jumblah = argz[1]
+const jumblah = argz[1] * 1
 if (checkATMuser(sender) < jumblah) return reply(`No tienes suficiente dinero para realizar la transferencia`)
 const tujuantf = `${mentioned[0].split('@')[0]}@s.whatsapp.net`
         fee = 0.005 *  jumblah
@@ -2082,7 +2083,7 @@ case 'balance':
 if (!isGroup) return reply(mess.only.group)
 if (!isUser2) return reply('Use 1st el comando work')
 samu330.updatePresence(from, Presence.composing)  
-const kantong = checkATMuser(sender)
+kantong = checkATMuser(sender)
 hailhy = `*⌜${pushname}⌟*\n★᭄ꦿ Posees ${kantong} Otakoins`   
 samu330.sendMessage(from, hailhy, MessageType.text, {quoted: sam})
 //reply(ind.uangkau(pushname, sender, kantong))
@@ -2099,9 +2100,9 @@ arg1 = q
 if (!arg1) return reply(`Ejemplo ${prefix}apostar ***\nGanas o pierdes Otakoins`)
 argz = arg1.split("|")
 if (isNaN(argz[0])) return reply(`Has una apuesta pajero!`)
-if (argz[0] < 0) return reply(`No seas pendejo, pajín!`)
-if (argz[0] < 100 ) return reply(`Apuesta mínima de 100`)
-dineroapostado = argz[0].trim()
+dineroapostado = argz[0] * 1
+if (dineroapostado < 0) return reply(`No seas pendejo, pajín!`)
+if (dineroapostado < 100 ) return reply(`Apuesta mínima de 100`)
 //reply(`${argz[0]}\n{argz[1]}`)
 const uaangkauuuiiu = checkATMuser(sender)
 const jññño = [`${uaangkauuuiiu}`]
@@ -3634,14 +3635,14 @@ break
 
 case 'baka':
         
-        txtt =`Hola ${pushname}\nEscoje tu opcion... `
+        const txtt =`Hola ${pushname}\nEscoje tu opcion... `
 
-               buttons1 = [{buttonId:`${prefix}menu`, 
+               const buttons1 = [{buttonId:`${prefix}menu`, 
                buttonText:{displayText: 'Show Menu'},type:1},
                {buttonId:`${prefix}owner`,buttonText:{displayText:'Owner'},type:1},
                {buttonId:`${prefix}ytadmin`,buttonText:{displayText:'YouTube'},type:1}]
 
-               imageMsg = (await samu330.prepareMessageMedia(fs.readFileSync(`./src/fake.jpg`), 'imageMessage', {thumbnail: fs.readFileSync(`./src/fake.jpg`)})).imageMessage
+               const imageMsg = (await samu330.prepareMessageMedia(fs.readFileSync(`./src/fake.jpg`), 'imageMessage', {thumbnail: fs.readFileSync(`./src/fake.jpg`)})).imageMessage
 
                buttonsMessage = {
                contentText: `${txtt}`,
@@ -3650,7 +3651,7 @@ case 'baka':
                headerType: 4
 }
 
-               prep = await samu330.prepareMessageFromContent(from,{buttonsMessage},{quoted: ftoko})
+               prep = await samu330.prepareMessageFromContent(from,{${buttonsMessage}},{quoted: ftoko})
                samu330.relayWAMessage(prep)
 break
 
@@ -5857,13 +5858,14 @@ ${m}
 ╰─┨-🔮𝉃𝜄𝜐𝉃𝜍𝜅𝉃𝛾🔮-┠─╯`
 **/
 u = `
- ┌ ﹍﹍𝈺﹉﹉﹉𝈻﹍﹍ ┐ 
+ ┌ ﹍﹍﹍𝈺﹉﹉﹉𝈻﹍﹍﹍ ┐ 
 ╭─╼┥𝈸⛥⛥⛥𝈹┝╾─╮
 ╽ ┌─────────┐ ┃
 ╽ ┌─────────┐ ┃
 ${a}
 ╿ └─────────┘ ╿
-╰─┨-🔮𝉃𝜄𝜐𝉃𝜍𝜅𝉃𝛾🔮-┠─╯`
+╰─┨-🔮𝉃𝜄𝜐𝉃𝜍𝜅𝉃𝛾🔮-┠─╯
+`
 //reply(`${u}`)
 if (luck3 != f){
 if (luck3 == luck4 && luck3 == luck5 && luck4 == luck5) {
