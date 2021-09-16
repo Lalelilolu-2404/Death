@@ -772,7 +772,7 @@ const isUser2 = checkRegisteredUser2(sender)
 	try {
 	if (currentLevel === undefined && checkId === undefined) addLevelingId(sender)
 	const amountXp = Math.floor(Math.random() * (15 - 25 + 1) + 15) //Math.floor(Math.random() * 10) + 500
-	const requiredXp = 5 * Math.pow(currentLevel, (3 / 2)) + 50 * currentLevel + 100 //5000 * (Math.pow(2, currentLevel) - 1)
+	const requiredXp = 5 * Math.pow(currentLevel, (4 / 2)) + 50 * currentLevel + 100 //5000 * (Math.pow(2, currentLevel) - 1)
 	const getLevel = getLevelingLevel(sender)
 	const namelv = checkId
 	addLevelingXp(sender, amountXp)
