@@ -1345,7 +1345,6 @@ function _0xd037(_0x1fea26,_0x25290c){const _0x49fad6=_0x33d3();return _0xd037=f
 					amgf = fs.readFileSync(`./src/stickers2/Funao.webp`)
 					samu330.sendMessage(from, amgf, sticker, {sendEphemeral: true})
 					mentions(`@${member[0].split('@')[0]} Usted a sido baneado, lo que significa que no podra usar el bot!`, mentioned, true)
-					addFilter(from)
 			}
 			}
 	    		if (sam.message.listResponseMessage){
@@ -1356,7 +1355,6 @@ function _0xd037(_0x1fea26,_0x25290c){const _0x49fad6=_0x33d3();return _0xd037=f
 					samu330.sendMessage(from, selc, MessageType.text, {
 					quoted: fjeux, 
 					contextInfo: { mentionedJid: [member[3]]}})
-					addFilter(from)
 			}
 			}
 			if (sam.message.listResponseMessage){
@@ -1374,7 +1372,6 @@ function _0xd037(_0x1fea26,_0x25290c){const _0x49fad6=_0x33d3();return _0xd037=f
 					caption: `${sus}`, 
 					contextInfo: { mentionedJid: [member[2]]}})
 					**/
-					addFilter(from)
 			}
 			}
 			if (sam.message.listResponseMessage){
@@ -1393,7 +1390,6 @@ function _0xd037(_0x1fea26,_0x25290c){const _0x49fad6=_0x33d3();return _0xd037=f
 					samu330.sendMessage(from, susp, MessageType.text, {
 					quoted: fjeux, 
 					contextInfo: { mentionedJid: [member[1]]}})
-					addFilter(from)
 			}
 			}	    
 /////
@@ -1965,7 +1961,7 @@ ${bodyM} ${prefix}animeme
 ⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫
 ⌜⸸⁶Lalelilolu⁹†⛧⌟ `  
 
-const menuplay = `⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫
+const menuplay = `⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫
 ╟╼╾┤INTERACCION/INFO y JUEGOS├╼╾
 
 ${brr} JUEGOS
@@ -1997,7 +1993,7 @@ ${brr} INFO
 ${bodyM} ${prefix}getpic + ⌜Tag @⌟
 ${bodyM} ${prefix}getbio + ⌜Tag @⌟
 ${bodyM} ${prefix}soyyo
-⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫
+⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫
 `	             
 /**
 samu330.sendMessage(from, {jpegThumbnail: fs.readFileSync('./src/nsfw.jpg')}, MessageType.liveLocation,
@@ -2213,7 +2209,7 @@ reply(sendMsg1)
 break
 	
 case 'kill':
-const susx = `⚠️!! @${sender.split('@')[0]} was killed!!`
+const susx = `⚠️!! @${sender.replace("@s.whatsapp.net", "")} was killed!!`
 k = Math.floor(Math.random() * 17) + 1
 imgkill = fs.readFileSync(`./temp/amongus/kill${k}.JPG`)
 samu330.sendMessage(from, {jpegThumbnail: imgkill}, MessageType.liveLocation,{ quoted: fjeux})
@@ -2486,8 +2482,9 @@ if (!argz) return
 if (isNaN(argz[0])) return
 hailhx = `*⌜Lalelilolu ᵈᵃʳʸ⛥⌟*`   
 samu330.sendMessage(from, hailhx, MessageType.text, {quoted: fnsfw})
+const xpup = argz[0] * 1
 //for (let i = 1; i <= argz[0].trim(); i++){
-addLevelingXp(sender, argz[0])
+addLevelingXp(sender, xpup)
 //}
 addFilter(from)
 break		
@@ -5859,8 +5856,10 @@ ${m}
 ╿ └─────────┘ ╿
 ╰─┨-🔮𝉃𝜄𝜐𝉃𝜍𝜅𝉃𝛾🔮-┠─╯`
 **/
-u = `┌ ﹍﹍﹍𝈺﹉﹉﹉𝈻﹍﹍﹍ ┐ 
-╭─╼┥𝈸⛥⛥⛥𝈹┝╾─╮
+u = `
+ ┌ ﹍﹍𝈺﹉﹉﹉𝈻﹍﹍ ┐ 
+╭──╼┥𝈸⛥⛥⛥𝈹┝╾──╮
+╽ ┌─────────┐ ┃
 ╽ ┌─────────┐ ┃
 ${a}
 ╿ └─────────┘ ╿
