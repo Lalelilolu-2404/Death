@@ -3651,7 +3651,7 @@ case 'baka':
                headerType: 4
 }
 
-               prep = await samu330.prepareMessageFromContent(from,{${buttonsMessage}},{quoted: ftoko})
+               prep = await samu330.prepareMessageFromContent(from,{buttonsMessage},{quoted: ftoko})
                samu330.relayWAMessage(prep)
 break
 
