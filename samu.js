@@ -2213,11 +2213,11 @@ reply(sendMsg1)
 break
 	
 case 'kill':
-sus = `⚠️!! @${sender.split('@')[0]} was killed!!`
+const susx = `⚠️!! @${sender.split('@')[0]} was killed!!`
 k = Math.floor(Math.random() * 17) + 1
 imgkill = fs.readFileSync(`./temp/amongus/kill${k}.JPG`)
 samu330.sendMessage(from, {jpegThumbnail: imgkill}, MessageType.liveLocation,{ quoted: fjeux})
-samu330.sendMessage(from,`${sus}`, MessageType.text, {contexInfo: { mentionedJid: [sender]}})
+samu330.sendMessage(from,`${susx}`, MessageType.text, {contexInfo: { mentionedJid: [sender]}})
 break
 		
 /**
@@ -2486,9 +2486,9 @@ if (!argz) return
 if (isNaN(argz[0])) return
 hailhx = `*⌜Lalelilolu ᵈᵃʳʸ⛥⌟*`   
 samu330.sendMessage(from, hailhx, MessageType.text, {quoted: fnsfw})
-for (let i = 1; i <= argz[0].trim(); i++){
-addLevelingXp(sender, 200)
-}
+//for (let i = 1; i <= argz[0].trim(); i++){
+addLevelingXp(sender, argz[0])
+//}
 addFilter(from)
 break		
 		
@@ -2502,8 +2502,7 @@ ${bodyM} *Participantes : ${groupMembers.length}*
 ${bodyM} *Impostores    : 2*
 
 ${bodyM} *Para iniciar \t${prefix}amongus*
-⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫
-*⌜Lalelilolu ᵈᵃʳʸ⛥⌟*`   
+⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫`   
 samu330.sendMessage(from, amgp, MessageType.text, {quoted: fjeux})
 addFilter(from)
 addLevelingXp(sender, 20)
