@@ -7580,12 +7580,13 @@ if (!isAllaud) return
 	for (let i = 0; i < sonsotak.length; i++){
 		if (body.includes(`${sonsotak[i]}`) && body.length == sonsotak[i].length){
 			const audiosxx = fs.readFileSync(`./anishan/${sonsotak[i]}.mp3`)
-			samu330.sendMessage(from, audiosxx, MessageType.audio, {quoted: faud, mimetype: 'audio/mp4', ptt:true})
+			//samu330.sendMessage(from, audiosxx, MessageType.audio, {quoted: faud, mimetype: 'audio/mp4', ptt:true})
+			samu330.sendMessage(from, audiosxx, MessageType.audio, { mimetype: 'audio/mp4', ptt:true})
 		}				
 	}
 		if (body.includes(`ª`) && body.length == 1){
 			const audiosxx = fs.readFileSync(`./anishan/A.mp3`)
-			samu330.sendMessage(from, audiosxx, MessageType.audio, {quoted: faud, mimetype: 'audio/mp4', ptt:true})
+			samu330.sendMessage(from, audiosxx, MessageType.audio, { mimetype: 'audio/mp4', ptt:true})
 		}
 	
 }
