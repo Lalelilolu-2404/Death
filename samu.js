@@ -450,6 +450,7 @@ m = simple.smsg(samu330, sam)
         const senderNumber = sender.split("@")[0]
         const groupMetadata = isGroup ? await samu330.groupMetadata(from) : ''
         const groupName = isGroup ? groupMetadata.subject : ''
+const groupId = isGroup ? groupMetadata.jid : ''
         const groupMembers = isGroup ? groupMetadata.participants : ''
         const groupAdmins = isGroup ? await wa.getGroupAdmins(groupMembers) : []
         const isAdmin = groupAdmins.includes(sender) || false
@@ -2169,6 +2170,11 @@ if (!isRegister) return samu330.sendMessage(from, notreg, MessageType.text, { qu
 checkLimit(sender)
 break 	
 
+case 'cami':
+var groupx = await samu330.groupMetadata(from)
+var mensajeDesc = `Grupo ${group.subject}\n${group.Jid}`
+samu330.sendMessage(from, mensajeDesc, MessageType.text)		
+break		
 /**		
 case prefix+'mining':
 case prefix+'minar':
