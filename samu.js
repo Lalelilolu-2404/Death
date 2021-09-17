@@ -1538,29 +1538,29 @@ if (!isNsfw) return reply(mess.nsfw)
 //uptime = process.uptime()
 
 const Menux = 
-`\b_*NORPO...*_\t\t\t\t\t\t\t\t_*GIFS*_	
+`\b_*NORPO...*_\t\t\t\t\t\t\t_*GIFS*_	
 
-\b${bodyM} ${prefix}lesbian\t\t\t\t\t\t\t${bodyM} ${prefix}pussyg 
+\b${bodyM} ${prefix}lesbian\t\t\t\t\t\t\t\t${bodyM} ${prefix}pussyg 
 \b${bodyM} ${prefix}tetas\t\t\t\t\t\t\t\t\t${bodyM} ${prefix}boobsg
-\b${bodyM} ${prefix}ass\t\t\t\t\t\t\t\t\t${bodyM} ${prefix}analg
+\b${bodyM} ${prefix}ass\t\t\t\t\t\t\t\t\t\t${bodyM} ${prefix}analg
 \b${bodyM} ${prefix}pussy
 
 \b_*HENTAI :3*_
 
 \b${bodyM} ${prefix}xwaifu\t\t\t\t\t\t\t\t${bodyM} ${prefix}xneko
-\b${bodyM} ${prefix}trap\t\t\t\t\t\t\t\t\t${bodyM} ${prefix}blow
+\b${bodyM} ${prefix}trap\t\t\t\t\t\t\t\t\t\t${bodyM} ${prefix}blow
 \b${bodyM} ${prefix}hentai\t\t\t\t\t\t\t\t${bodyM} ${prefix}ahegao
-\b${bodyM} ${prefix}xboobs\t\t\t\t\t\t\t${bodyM} ${prefix}xass
-\b${bodyM} ${prefix}muslos\t\t\t\t\t\t\t${bodyM} ${prefix}patas
-\b${bodyM} ${prefix}futa\t\t\t\t\t\t\t\t\t${bodyM} ${prefix}sidebobs
+\b${bodyM} ${prefix}xboobs\t\t\t\t\t\t\t\t${bodyM} ${prefix}xass
+\b${bodyM} ${prefix}muslos\t\t\t\t\t\t\t\t${bodyM} ${prefix}patas
+\b${bodyM} ${prefix}futa\t\t\t\t\t\t\t\t\t\t${bodyM} ${prefix}sidebobs
 \b${bodyM} ${prefix}blowjob\t\t\t\t\t\t\t${bodyM} ${prefix}armpits
-\b${bodyM} ${prefix}femdom\t\t\t\t\t\t${bodyM} ${prefix}pussyimg
-\b${bodyM} ${prefix}oppai\t\t\t\t\t\t\t\t${bodyM} ${prefix}cumimg`
+\b${bodyM} ${prefix}femdom\t\t\t\t\t\t\t${bodyM} ${prefix}pussyimg
+\b${bodyM} ${prefix}oppai\t\t\t\t\t\t\t\t\t${bodyM} ${prefix}cumimg`
 addFilter(from)
 addLevelingXp(sender, 20)		
 //samu330.sendMessage(from, samuPn, image, { quoted: fnsfw, caption: `${Menu18}`, thumbnail: samuPn, contextInfo: { mentionedJid: [sender]}})              
 
-sendButLocation(from, `*Hola :* @${sender.replace("@s.whatsapp.net", "")}\n\n${Menux}`, `© Creator\n⛧⸸⁶Death⁹†حب♡ت`, 
+sendButLocation(from, `\b*Hola :* @${sender.replace("@s.whatsapp.net", "")}\n\n${Menux}`, `© Creator\n⛧⸸⁶Death⁹†حب♡ت`, 
 		{jpegThumbnail: fs.readFileSync('./src/+18.jpg')}, [
           {buttonId: `${prefix}Rikolino`, buttonText: {displayText: `Rico :3`}, type: 1},
           {buttonId: `${prefix}ReTurbio`, buttonText: {displayText: `Re Turbio`}, type: 1},
@@ -2349,12 +2349,7 @@ participant: `33749258491-1630707686@g.us`, ...(from ?
 message: { "videoMessage": { "caption":`Lalelilolu ᵈᵃʳʸ⛥\n${pushname}`, 'jpegThumbnail': 
 			    fs.readFileSync('./src/fake.jpg')}}
 }				
-samu330.sendMessage(from, susxx, MessageType.text, { 
-quoted : fkil, 
-contexInfo: { 
-mentionedJid: [sender]
-},
-})
+samu330.sendMessage(from, susxx, MessageType.text, { quoted: fkil, contexInfo: { mentionedJid: [sender]}})
 break
 		
 /**
@@ -4395,9 +4390,7 @@ break
 case 'nivel':
 samu330.updatePresence(from, Presence.composing)
 const getLevel1 = getLevelingLevel(sender)
-const lvup =  `_*🧗🏻‍♂️Nivel Actual!͟*_	
-💠 Nombre:
-\t*${pushname}*	
+const lvup =  `💠*${pushname}*	
 ┎┈┈┈┈┈┈┈┈┈
 ✨XP: ${getLevelingXp(sender)}
 📚Nivel: ${getLevel1} ➫ ${getLevelingLevel(sender)}
