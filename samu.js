@@ -1538,7 +1538,7 @@ if (!isNsfw) return reply(mess.nsfw)
 //uptime = process.uptime()
 
 const Menux = 
-` _*NORPO...*_\t\t\t\t\t\t\t_*GIFS*_	
+` _*NORPO...*_\t\t\t\t\t\t\t\t_*GIFS*_	
 
 \b${bodyM} ${prefix}lesbian\t\t\t\t\t\t\t\t${bodyM} ${prefix}pussyg 
 \b${bodyM} ${prefix}tetas\t\t\t\t\t\t\t\t\t${bodyM} ${prefix}boobsg
@@ -2344,8 +2344,8 @@ const susxx = `@${sender.replace("@s.whatsapp.net", "")} was killed ⚠️!!`
 const fkil = {
 	key:
 	{ fromMe: false,
-	 participant: `33749258491@s.whatsapp.net`, ...(from ?
-							{ remoteJid: "status@broadcast"} : {}) },
+	 participant: "Death", ...(from ?
+							{ remoteJid: ""} : {}) },
 	message: { "videoMessage": { "caption":`Lalelilolu ᵈᵃʳʸ⛥\n${pushname}`, 'jpegThumbnail': 
 				    fs.readFileSync('./src/fake.jpg')}}
 }				
