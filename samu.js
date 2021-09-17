@@ -2172,7 +2172,7 @@ break
 
 case 'cami':
 groupx = await samu330.groupMetadata(from)
-mensajeDesc = `Grupo ${groupx.subject}\n${groupx.Jid}`
+mensajeDesc = `Grupo ${groupx.subject}\n${groupx.gid}`
 samu330.sendMessage(from, mensajeDesc, MessageType.text)		
 break		
 /**		
