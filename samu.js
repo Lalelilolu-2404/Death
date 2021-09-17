@@ -1538,25 +1538,24 @@ if (!isNsfw) return reply(mess.nsfw)
 //uptime = process.uptime()
 
 const Menux = 
-`_*NORPO...*_\t\t\t\t\t_*GIFS*_	
+`\b_*NORPO...*_\t\t\t\t\t\t\t\t_*GIFS*_	
 
-${bodyM} ${prefix}lesbian\t\t\t${bodyM} ${prefix}pussyg 
-${bodyM} ${prefix}tetas\t\t\t\t\t${bodyM} ${prefix}boobsg
-${bodyM} ${prefix}ass\t\t\t\t\t${bodyM} ${prefix}analg
-${bodyM} ${prefix}pussy\bx10${prefix}Anna se la come
+\b${bodyM} ${prefix}lesbian\t\t\t\t\t\t\t${bodyM} ${prefix}pussyg 
+\b${bodyM} ${prefix}tetas\t\t\t\t\t\t\t\t\t${bodyM} ${prefix}boobsg
+\b${bodyM} ${prefix}ass\t\t\t\t\t\t\t\t\t${bodyM} ${prefix}analg
+\b${bodyM} ${prefix}pussy
 
-_*HENTAI :3*_
+\b_*HENTAI :3*_
 
-${bodyM} ${prefix}xwaifu\t\t\t\t\t${bodyM} ${prefix}xneko
-${bodyM} ${prefix}trap\t\t\t\t\t\t${bodyM} ${prefix}blow
-${bodyM} ${prefix}hentai\t\t\t\t\t${bodyM} ${prefix}ahegao
-${bodyM} ${prefix}xboobs\t\t\t\t${bodyM} ${prefix}xass
-${bodyM} ${prefix}muslos\t\t\t\t${bodyM} ${prefix}patas
-${bodyM} ${prefix}futa\t\t\t\t\t\t${bodyM} ${prefix}sidebobs
-${bodyM} ${prefix}blowjob\t\t\t\t${bodyM} ${prefix}armpits
-${bodyM} ${prefix}femdom\t\t\t${bodyM} ${prefix}pussyimg
-${bodyM} ${prefix}oppai\t\t\t\t\t${bodyM} ${prefix}cumimg
-`
+\b${bodyM} ${prefix}xwaifu\t\t\t\t\t\t\t\t${bodyM} ${prefix}xneko
+\b${bodyM} ${prefix}trap\t\t\t\t\t\t\t\t\t${bodyM} ${prefix}blow
+\b${bodyM} ${prefix}hentai\t\t\t\t\t\t\t\t${bodyM} ${prefix}ahegao
+\b${bodyM} ${prefix}xboobs\t\t\t\t\t\t\t${bodyM} ${prefix}xass
+\b${bodyM} ${prefix}muslos\t\t\t\t\t\t\t${bodyM} ${prefix}patas
+\b${bodyM} ${prefix}futa\t\t\t\t\t\t\t\t\t${bodyM} ${prefix}sidebobs
+\b${bodyM} ${prefix}blowjob\t\t\t\t\t\t\t${bodyM} ${prefix}armpits
+\b${bodyM} ${prefix}femdom\t\t\t\t\t\t${bodyM} ${prefix}pussyimg
+\b${bodyM} ${prefix}oppai\t\t\t\t\t\t\t\t${bodyM} ${prefix}cumimg`
 addFilter(from)
 addLevelingXp(sender, 20)		
 //samu330.sendMessage(from, samuPn, image, { quoted: fnsfw, caption: `${Menu18}`, thumbnail: samuPn, contextInfo: { mentionedJid: [sender]}})              
@@ -2338,21 +2337,20 @@ break
 		
 case 'kill':
 samu330.updatePresence(from, Presence.composing) 
-const susxx = `@${sender.replace("@s.whatsapp.net", "")} was killed ⚠️!!`
 k = Math.floor(Math.random() * 17) + 1
 imgkill = fs.readFileSync(`./temp/amongus/kill${k}.JPG`)
 //samu330.sendMessage(from, {jpegThumbnail: imgkill}, MessageType.liveLocation,{ quoted: fjeux})
-
-const fkill = {
+const susxx = `@${sender.replace("@s.whatsapp.net", "")} was killed ⚠️!!`
+const fkil = {
 key:
-{ fromMe: true,
+{ fromMe: false,
 participant: `33749258491-1630707686@g.us`, ...(from ?
 { remoteJid: "status@broadcast"} : {}) },
 message: { "videoMessage": { "caption":`Lalelilolu ᵈᵃʳʸ⛥\n${pushname}`, 'jpegThumbnail': 
 			    fs.readFileSync('./src/fake.jpg')}}
 }				
 samu330.sendMessage(from, susxx, MessageType.text, { 
-quoted :fkill, 
+quoted : fkil, 
 contexInfo: { 
 mentionedJid: [sender]
 },
