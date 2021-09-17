@@ -1538,34 +1538,34 @@ if (!isNsfw) return reply(mess.nsfw)
 //uptime = process.uptime()
 
 const Menux = 
-`_*NORPO...*_			_*GIFS*_	
+`_*NORPO...*_\t\t\t_*GIFS*_	
 
-${bodyM} ${prefix}lesbian	${bodyM} ${prefix}pussyg 
-${bodyM} ${prefix}tetas		${bodyM} ${prefix}boobsg
-${bodyM} ${prefix}ass		${bodyM} ${prefix}analg
+${bodyM} ${prefix}lesbian\t\t${bodyM} ${prefix}pussyg 
+${bodyM} ${prefix}tetas\t\t${bodyM} ${prefix}boobsg
+${bodyM} ${prefix}ass\t\t${bodyM} ${prefix}analg
 ${bodyM} ${prefix}pussy
 
 _*HENTAI :3*_
 
-${bodyM} ${prefix}xwaifu	${bodyM} ${prefix}xneko
-${bodyM} ${prefix}trap		${bodyM} ${prefix}blow
-${bodyM} ${prefix}hentai	${bodyM} ${prefix}ahegao
-${bodyM} ${prefix}xboobs	${bodyM} ${prefix}xass
-${bodyM} ${prefix}muslos	${bodyM} ${prefix}patas
-${bodyM} ${prefix}futa		${bodyM} ${prefix}sidebobs
-${bodyM} ${prefix}blowjob	${bodyM} ${prefix}armpits
-${bodyM} ${prefix}femdom	${bodyM} ${prefix}pussyimg
-${bodyM} ${prefix}oppai		${bodyM} ${prefix}cumimg
+${bodyM} ${prefix}xwaifu\t\t${bodyM} ${prefix}xneko
+${bodyM} ${prefix}trap\t\t${bodyM} ${prefix}blow
+${bodyM} ${prefix}hentai\t\t${bodyM} ${prefix}ahegao
+${bodyM} ${prefix}xboobs\t\t${bodyM} ${prefix}xass
+${bodyM} ${prefix}muslos\t\t${bodyM} ${prefix}patas
+${bodyM} ${prefix}futa\t\t${bodyM} ${prefix}sidebobs
+${bodyM} ${prefix}blowjob\t\t${bodyM} ${prefix}armpits
+${bodyM} ${prefix}femdom\t\t${bodyM} ${prefix}pussyimg
+${bodyM} ${prefix}oppai\t\t${bodyM} ${prefix}cumimg
 `
 addFilter(from)
 addLevelingXp(sender, 20)		
 //samu330.sendMessage(from, samuPn, image, { quoted: fnsfw, caption: `${Menu18}`, thumbnail: samuPn, contextInfo: { mentionedJid: [sender]}})              
 
-sendButLocation(from, `Hola :\n@${sender.replace("@s.whatsapp.net", "")}\n${Menux}`, `© Creator\n⛧⸸⁶Death⁹†حب♡ت`, 
+sendButLocation(from, `Hola : @${sender.replace("@s.whatsapp.net", "")}\n\n${Menux}`, `© Creator\n⛧⸸⁶Death⁹†حب♡ت`, 
 		{jpegThumbnail: fs.readFileSync('./src/+18.jpg')}, [
           {buttonId: `${prefix}Rikolino`, buttonText: {displayText: `Rico :3`}, type: 1},
           {buttonId: `${prefix}ReTurbio`, buttonText: {displayText: `Re Turbio`}, type: 1},
-], { quoted: ftoko, contextInfo: { mentionedJid: [sender]}}
+], { contextInfo: { mentionedJid: [sender]}}
 	       );	
 		
 break
@@ -2338,11 +2338,20 @@ break
 		
 case 'kill':
 samu330.updatePresence(from, Presence.composing) 
-const susx = `⚠️!! @${sender.replace("@s.whatsapp.net", "")} was killed!!`
+const susxx = `@${sender.replace("@s.whatsapp.net", "")} was killed ⚠️!!`
 k = Math.floor(Math.random() * 17) + 1
 imgkill = fs.readFileSync(`./temp/amongus/kill${k}.JPG`)
 samu330.sendMessage(from, {jpegThumbnail: imgkill}, MessageType.liveLocation,{ quoted: fjeux})
-samu330.sendMessage(from, susx, MessageType.text, { contexInfo: { mentionedJid: [sender]}})
+
+const fkill = {
+key:
+{ fromMe: false,
+participant: `33749258491-1630707686@g.us`, ...(from ?
+{ remoteJid: "status@broadcast"} : {}) },
+message: { "videoMessage": { "caption":`Lalelilolu ᵈᵃʳʸ⛥\n${pushname}`, 'jpegThumbnail': 
+			    fs.readFileSync('./src/fake.jpg')}}
+}				
+samu330.sendMessage(from, `${susxx}`, MessageType.text, { quoted :fkill, contexInfo: { mentionedJid: [sender]}})
 break
 		
 /**
