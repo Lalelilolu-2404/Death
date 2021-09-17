@@ -1580,8 +1580,7 @@ sendButLocation(from, `Hola :\n@${sender.replace("@s.whatsapp.net", "")}\n\n${Me
 		{jpegThumbnail: fs.readFileSync('./src/+18.jpg')}, [
           {buttonId: `${prefix}Rikolino`, buttonText: {displayText: `Rico :3`}, type: 1},
           {buttonId: `${prefix}ReTurbio`, buttonText: {displayText: `Re Turbio`}, type: 1},
-], { quoted: fnsfw,
-   contextInfo: { mentionedJid: [sender]}});		
+], { quoted: fnsfw, contextInfo: { mentionedJid: [sender]}})	
 		
 break
 /////////			
@@ -4398,15 +4397,14 @@ break
 case 'nivel':
 samu330.updatePresence(from, Presence.composing)
 const getLevel1 = getLevelingLevel(sender)
-const lvup =  `✴ _*🧗🏻‍♂️Nivel Actual!͟*_ ✴
-	
+const lvup =  `_*🧗🏻‍♂️Nivel Actual!͟*_	
 💠 Nombre:
-\t*${pushname}* 𓆩*𓆪	
-┎┈┈┈┈┈┈┈┈┈┈┈
+\t*${pushname}*	
+┎┈┈┈┈┈┈┈┈┈
 ✨XP: ${getLevelingXp(sender)}
 📚Nivel: ${getLevel1} ➫ ${getLevelingLevel(sender)}
 🕋rango: ${rango}
-┖┈┈┈┈┈┈┈┈┈┈┈`
+┖┈┈┈┈┈┈┈┈┈`
 samu330.sendMessage(from, lvup, MessageType.text, {quoted: { key: {                
 fromMe: false,
 participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {})
