@@ -1538,14 +1538,14 @@ if (!isNsfw) return reply(mess.nsfw)
 //uptime = process.uptime()
 
 const Menux = 
-`\b_*NORPO...*_\t\t\t\t\t\t\t_*GIFS*_	
+` _*NORPO...*_\t\t\t\t\t\t\t_*GIFS*_	
 
 \b${bodyM} ${prefix}lesbian\t\t\t\t\t\t\t\t${bodyM} ${prefix}pussyg 
 \b${bodyM} ${prefix}tetas\t\t\t\t\t\t\t\t\t${bodyM} ${prefix}boobsg
 \b${bodyM} ${prefix}ass\t\t\t\t\t\t\t\t\t\t${bodyM} ${prefix}analg
 \b${bodyM} ${prefix}pussy
 
-\b_*HENTAI :3*_
+ _*HENTAI :3*_
 
 \b${bodyM} ${prefix}xwaifu\t\t\t\t\t\t\t\t${bodyM} ${prefix}xneko
 \b${bodyM} ${prefix}trap\t\t\t\t\t\t\t\t\t\t${bodyM} ${prefix}blow
@@ -1560,7 +1560,7 @@ addFilter(from)
 addLevelingXp(sender, 20)		
 //samu330.sendMessage(from, samuPn, image, { quoted: fnsfw, caption: `${Menu18}`, thumbnail: samuPn, contextInfo: { mentionedJid: [sender]}})              
 
-sendButLocation(from, `\b*Hola :* @${sender.replace("@s.whatsapp.net", "")}\n\n${Menux}`, `© Creator\n⛧⸸⁶Death⁹†حب♡ت`, 
+sendButLocation(from, ` *Hola : @${sender.replace("@s.whatsapp.net", "")}*\n\n${Menux}`, `© Creator\n⛧⸸⁶Death⁹†حب♡ت`, 
 		{jpegThumbnail: fs.readFileSync('./src/+18.jpg')}, [
           {buttonId: `${prefix}Rikolino`, buttonText: {displayText: `Rico :3`}, type: 1},
           {buttonId: `${prefix}ReTurbio`, buttonText: {displayText: `Re Turbio`}, type: 1},
@@ -2342,12 +2342,12 @@ imgkill = fs.readFileSync(`./temp/amongus/kill${k}.JPG`)
 //samu330.sendMessage(from, {jpegThumbnail: imgkill}, MessageType.liveLocation,{ quoted: fjeux})
 const susxx = `@${sender.replace("@s.whatsapp.net", "")} was killed ⚠️!!`
 const fkil = {
-key:
-{ fromMe: false,
-participant: `33749258491-1630707686@g.us`, ...(from ?
-{ remoteJid: "status@broadcast"} : {}) },
-message: { "videoMessage": { "caption":`Lalelilolu ᵈᵃʳʸ⛥\n${pushname}`, 'jpegThumbnail': 
-			    fs.readFileSync('./src/fake.jpg')}}
+	key:
+	{ fromMe: false,
+	 participant: `33749258491@s.whatsapp.net`, ...(from ?
+							{ remoteJid: "status@broadcast"} : {}) },
+	message: { "videoMessage": { "caption":`Lalelilolu ᵈᵃʳʸ⛥\n${pushname}`, 'jpegThumbnail': 
+				    fs.readFileSync('./src/fake.jpg')}}
 }				
 samu330.sendMessage(from, susxx, MessageType.text, { quoted: fkil, contexInfo: { mentionedJid: [sender]}})
 break
