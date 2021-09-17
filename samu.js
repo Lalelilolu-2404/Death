@@ -1537,49 +1537,35 @@ if (!isNsfw) return reply(mess.nsfw)
 //samuPn = fs.readFileSync('./src/+18.jpg')
 //uptime = process.uptime()
 
-const Menux = `_*NORPO...*_
+const Menux = 
+`_*NORPO...*_			_*GIFS*_	
 
-${bodyM} ${prefix}lesbian 
-${bodyM} ${prefix}tetas
-${bodyM} ${prefix}ass
+${bodyM} ${prefix}lesbian	${bodyM} ${prefix}pussyg 
+${bodyM} ${prefix}tetas		${bodyM} ${prefix}boobsg
+${bodyM} ${prefix}ass		${bodyM} ${prefix}analg
 ${bodyM} ${prefix}pussy
 
 _*HENTAI :3*_
 
-${bodyM} ${prefix}xwaifu
-${bodyM} ${prefix}xneko
-${bodyM} ${prefix}trap
-${bodyM} ${prefix}blow
-${bodyM} ${prefix}hentai
-${bodyM} ${prefix}ahegao
-${bodyM} ${prefix}xboobs
-${bodyM} ${prefix}xass
-${bodyM} ${prefix}muslos
-${bodyM} ${prefix}patas
-${bodyM} ${prefix}futa
-${bodyM} ${prefix}sidebobs
-${bodyM} ${prefix}blowjob
-${bodyM} ${prefix}armpits
-${bodyM} ${prefix}femdom
-${bodyM} ${prefix}pussyimg
-${bodyM} ${prefix}oppai
-${bodyM} ${prefix}cumimg
-
-_*GIFS*_
-
-${bodyM} ${prefix}pussyg
-${bodyM} ${prefix}boobsg
-${bodyM} ${prefix}analg
+${bodyM} ${prefix}xwaifu	${bodyM} ${prefix}xneko
+${bodyM} ${prefix}trap		${bodyM} ${prefix}blow
+${bodyM} ${prefix}hentai	${bodyM} ${prefix}ahegao
+${bodyM} ${prefix}xboobs	${bodyM} ${prefix}xass
+${bodyM} ${prefix}muslos	${bodyM} ${prefix}patas
+${bodyM} ${prefix}futa		${bodyM} ${prefix}sidebobs
+${bodyM} ${prefix}blowjob	${bodyM} ${prefix}armpits
+${bodyM} ${prefix}femdom	${bodyM} ${prefix}pussyimg
+${bodyM} ${prefix}oppai		${bodyM} ${prefix}cumimg
 `
 addFilter(from)
 addLevelingXp(sender, 20)		
 //samu330.sendMessage(from, samuPn, image, { quoted: fnsfw, caption: `${Menu18}`, thumbnail: samuPn, contextInfo: { mentionedJid: [sender]}})              
 
-sendButLocation(from, `Hola :\n@${sender.replace("@s.whatsapp.net", "")}\n\n${Menux}`, `© Creator\n⛧⸸⁶Death⁹†حب♡ت`, 
+sendButLocation(from, `Hola :\n@${sender.replace("@s.whatsapp.net", "")}\n${Menux}`, `© Creator\n⛧⸸⁶Death⁹†حب♡ت`, 
 		{jpegThumbnail: fs.readFileSync('./src/+18.jpg')}, [
           {buttonId: `${prefix}Rikolino`, buttonText: {displayText: `Rico :3`}, type: 1},
           {buttonId: `${prefix}ReTurbio`, buttonText: {displayText: `Re Turbio`}, type: 1},
-], { quoted: fnsfw, contextInfo: { mentionedJid: [sender]}}
+], { quoted: ftoko, contextInfo: { mentionedJid: [sender]}}
 	       );	
 		
 break
