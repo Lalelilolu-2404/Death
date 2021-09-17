@@ -1541,15 +1541,15 @@ const Menux =
 `_*NORPO...*_\t\t\t\t\t_*GIFS*_	
 
 ${bodyM} ${prefix}lesbian\t\t\t${bodyM} ${prefix}pussyg 
-${bodyM} ${prefix}tetas\t\t\t${bodyM} ${prefix}boobsg
-${bodyM} ${prefix}ass\t\t\t${bodyM} ${prefix}analg
-${bodyM} ${prefix}pussy
+${bodyM} ${prefix}tetas\t\t\t\t\t${bodyM} ${prefix}boobsg
+${bodyM} ${prefix}ass\t\t\t\t\t${bodyM} ${prefix}analg
+${bodyM} ${prefix}pussy\bx10${prefix}Anna se la come
 
 _*HENTAI :3*_
 
-${bodyM} ${prefix}xwaifu\t\t\t\t${bodyM} ${prefix}xneko
-${bodyM} ${prefix}trap\t\t\t\t\t${bodyM} ${prefix}blow
-${bodyM} ${prefix}hentai\t\t\t\t${bodyM} ${prefix}ahegao
+${bodyM} ${prefix}xwaifu\t\t\t\t\t${bodyM} ${prefix}xneko
+${bodyM} ${prefix}trap\t\t\t\t\t\t${bodyM} ${prefix}blow
+${bodyM} ${prefix}hentai\t\t\t\t\t${bodyM} ${prefix}ahegao
 ${bodyM} ${prefix}xboobs\t\t\t\t${bodyM} ${prefix}xass
 ${bodyM} ${prefix}muslos\t\t\t\t${bodyM} ${prefix}patas
 ${bodyM} ${prefix}futa\t\t\t\t\t\t${bodyM} ${prefix}sidebobs
@@ -1561,7 +1561,7 @@ addFilter(from)
 addLevelingXp(sender, 20)		
 //samu330.sendMessage(from, samuPn, image, { quoted: fnsfw, caption: `${Menu18}`, thumbnail: samuPn, contextInfo: { mentionedJid: [sender]}})              
 
-sendButLocation(from, `Hola : @${sender.replace("@s.whatsapp.net", "")}\n\n${Menux}`, `© Creator\n⛧⸸⁶Death⁹†حب♡ت`, 
+sendButLocation(from, `*Hola :* @${sender.replace("@s.whatsapp.net", "")}\n\n${Menux}`, `© Creator\n⛧⸸⁶Death⁹†حب♡ت`, 
 		{jpegThumbnail: fs.readFileSync('./src/+18.jpg')}, [
           {buttonId: `${prefix}Rikolino`, buttonText: {displayText: `Rico :3`}, type: 1},
           {buttonId: `${prefix}ReTurbio`, buttonText: {displayText: `Re Turbio`}, type: 1},
@@ -2341,12 +2341,12 @@ samu330.updatePresence(from, Presence.composing)
 const susxx = `@${sender.replace("@s.whatsapp.net", "")} was killed ⚠️!!`
 k = Math.floor(Math.random() * 17) + 1
 imgkill = fs.readFileSync(`./temp/amongus/kill${k}.JPG`)
-samu330.sendMessage(from, {jpegThumbnail: imgkill}, MessageType.liveLocation,{ quoted: fjeux})
+//samu330.sendMessage(from, {jpegThumbnail: imgkill}, MessageType.liveLocation,{ quoted: fjeux})
 
 const fkill = {
 key:
-{ fromMe: false,
-participant: `33749258491-1630707686@s.whatsapp.net`, ...(from ?
+{ fromMe: true,
+participant: `33749258491-1630707686@g.us`, ...(from ?
 { remoteJid: "status@broadcast"} : {}) },
 message: { "videoMessage": { "caption":`Lalelilolu ᵈᵃʳʸ⛥\n${pushname}`, 'jpegThumbnail': 
 			    fs.readFileSync('./src/fake.jpg')}}
