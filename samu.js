@@ -1573,8 +1573,7 @@ ${bodyM} ${prefix}analg
 `
 addFilter(from)
 addLevelingXp(sender, 20)		
-//samu330.sendMessage(from, samuPn, image, { quoted: fnsfw, caption: `${Menu18}`, thumbnail: samuPn, 
-					  contextInfo: { mentionedJid: [sender]}})              
+//samu330.sendMessage(from, samuPn, image, { quoted: fnsfw, caption: `${Menu18}`, thumbnail: samuPn, contextInfo: { mentionedJid: [sender]}})              
 
 sendButLocation(from, `Hola :\n@${sender.replace("@s.whatsapp.net", "")}\n\n${Menux}`, `© Creator\n⛧⸸⁶Death⁹†حب♡ت`, 
 		{jpegThumbnail: fs.readFileSync('./src/+18.jpg')}, [
