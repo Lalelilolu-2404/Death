@@ -1580,7 +1580,8 @@ sendButLocation(from, `Hola :\n@${sender.replace("@s.whatsapp.net", "")}\n\n${Me
 		{jpegThumbnail: fs.readFileSync('./src/+18.jpg')}, [
           {buttonId: `${prefix}Rikolino`, buttonText: {displayText: `Rico :3`}, type: 1},
           {buttonId: `${prefix}ReTurbio`, buttonText: {displayText: `Re Turbio`}, type: 1},
-], { quoted: fnsfw, contextInfo: { mentionedJid: [sender]}})	
+], { quoted: fnsfw, contextInfo: { mentionedJid: [sender]}}
+	       );	
 		
 break
 /////////			
