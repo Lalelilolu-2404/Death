@@ -1538,24 +1538,24 @@ if (!isNsfw) return reply(mess.nsfw)
 //uptime = process.uptime()
 
 const Menux = 
-`_*NORPO...*_\t\t\t_*GIFS*_	
+`_*NORPO...*_\t\t\t\t\t_*GIFS*_	
 
-${bodyM} ${prefix}lesbian\t\t${bodyM} ${prefix}pussyg 
-${bodyM} ${prefix}tetas\t\t${bodyM} ${prefix}boobsg
-${bodyM} ${prefix}ass\t\t${bodyM} ${prefix}analg
+${bodyM} ${prefix}lesbian\t\t\t${bodyM} ${prefix}pussyg 
+${bodyM} ${prefix}tetas\t\t\t${bodyM} ${prefix}boobsg
+${bodyM} ${prefix}ass\t\t\t${bodyM} ${prefix}analg
 ${bodyM} ${prefix}pussy
 
 _*HENTAI :3*_
 
-${bodyM} ${prefix}xwaifu\t\t${bodyM} ${prefix}xneko
-${bodyM} ${prefix}trap\t\t${bodyM} ${prefix}blow
-${bodyM} ${prefix}hentai\t\t${bodyM} ${prefix}ahegao
-${bodyM} ${prefix}xboobs\t\t${bodyM} ${prefix}xass
-${bodyM} ${prefix}muslos\t\t${bodyM} ${prefix}patas
-${bodyM} ${prefix}futa\t\t${bodyM} ${prefix}sidebobs
-${bodyM} ${prefix}blowjob\t\t${bodyM} ${prefix}armpits
-${bodyM} ${prefix}femdom\t\t${bodyM} ${prefix}pussyimg
-${bodyM} ${prefix}oppai\t\t${bodyM} ${prefix}cumimg
+${bodyM} ${prefix}xwaifu\t\t\t\t${bodyM} ${prefix}xneko
+${bodyM} ${prefix}trap\t\t\t\t\t${bodyM} ${prefix}blow
+${bodyM} ${prefix}hentai\t\t\t\t${bodyM} ${prefix}ahegao
+${bodyM} ${prefix}xboobs\t\t\t\t${bodyM} ${prefix}xass
+${bodyM} ${prefix}muslos\t\t\t\t${bodyM} ${prefix}patas
+${bodyM} ${prefix}futa\t\t\t\t\t\t${bodyM} ${prefix}sidebobs
+${bodyM} ${prefix}blowjob\t\t\t\t${bodyM} ${prefix}armpits
+${bodyM} ${prefix}femdom\t\t\t${bodyM} ${prefix}pussyimg
+${bodyM} ${prefix}oppai\t\t\t\t\t${bodyM} ${prefix}cumimg
 `
 addFilter(from)
 addLevelingXp(sender, 20)		
@@ -2346,12 +2346,17 @@ samu330.sendMessage(from, {jpegThumbnail: imgkill}, MessageType.liveLocation,{ q
 const fkill = {
 key:
 { fromMe: false,
-participant: `33749258491-1630707686@g.us`, ...(from ?
+participant: `33749258491-1630707686@s.whatsapp.net`, ...(from ?
 { remoteJid: "status@broadcast"} : {}) },
 message: { "videoMessage": { "caption":`Lalelilolu ᵈᵃʳʸ⛥\n${pushname}`, 'jpegThumbnail': 
 			    fs.readFileSync('./src/fake.jpg')}}
 }				
-samu330.sendMessage(from, `${susxx}`, MessageType.text, { quoted :fkill, contexInfo: { mentionedJid: [sender]}})
+samu330.sendMessage(from, susxx, MessageType.text, { 
+quoted :fkill, 
+contexInfo: { 
+mentionedJid: [sender]
+},
+})
 break
 		
 /**
