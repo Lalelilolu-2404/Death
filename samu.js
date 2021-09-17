@@ -2002,7 +2002,7 @@ ${bodyM} ${prefix}animeme
 ⌜⸸⁶Lalelilolu⁹†⛧⌟ `  
 
 const menuplay = `⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫
-╟╼╾┤INTERACCION/INFO y JUEGOS├╼╾
+╟╼╾┤INTERACCION/INFO Y JUEGOS├╼╾
 
 ${brr} JUEGOS
 
@@ -2059,7 +2059,7 @@ samu330.sendMessage(from, `${xmenux}`, MessageType.text, {
 	contextInfo: {externalAdReply :{
 	title: `BIENVENIDO A :\n「 ${mdata.subject} 」`,
 	//body: '',
-	sourceUrl : `${linkx}`, 
+	//sourceUrl : `${linkx}`, 
 	thumbnail : fs.readFileSync('./src/assistant.jpg')}}}
 	)
 		
