@@ -1859,7 +1859,7 @@ const xmenux = `Nightcore  -  Rock mix
 01:52 ━━━●───── 03:08
      ⇆ㅤㅤ ◁ㅤ ❚❚ㅤ ▷ㅤ ㅤ↻﻿
                   ılıılıılıılıılıılı
-⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫
+⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫
 Hola *${pushname}* ${timeFt}
 
 _Tipo de usuario:_ ${tipoDeUsr}
@@ -1869,7 +1869,7 @@ ${bodyM} Nivel: ${getLevelingLevel(sender)}
 ${bodyM} rango: ${rango}
 ┖┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 Son las *${hora}*\nHoy es *${week1}  ${calender1}*
-=========================================
+=====================================
 ╟╼╾┤INFORMACION!?├╼╾
 
 ${bodyM} _Reglas del BOT_: *${prefix}reglas*
@@ -1877,7 +1877,7 @@ ${bodyM} _Reglas del Grupo_: *${prefix}rules*
 ${bodyM} *Prefijo :* [ *${prefix}* ]
 ${bodyM} ${prefix}nivel
 ${bodyM} ${prefix}lb (ranked)
-=========================================
+=====================================
 ╟╼╾┤COMANDOS ADMINS├╼╾
 
 ${bodyM} ${prefix}kick + ⌜Tag @⌟
@@ -1906,7 +1906,7 @@ ${bodyM} ${prefix}notificar + ⌜Texto⌟
 ${bodyM} ${prefix}imagetag + ⌜ImageQuoted⌟
 ${bodyM} ${prefix}stickertag + ⌜Tag Sticker⌟
 ${bodyM} ${prefix}totag
-=========================================
+=====================================
 ╟╼╾┤COMANDOS OWNER├╼╾
 
 ${bodyM} ${prefix}public
@@ -1916,7 +1916,7 @@ ${bodyM} ${prefix}ban + ⌜Tag @⌟
 ${bodyM} ${prefix}unban
 ${bodyM} ${prefix}banchat 1/0
 ${bodyM} ${prefix}apagar
-=========================================
+=====================================
 ╟╼╾┤MUSICA/VIDEO Y OTROS├╼╾_
 
 ${bodyM} ${prefix}play + ⌜Texto / link⌟
@@ -1959,7 +1959,7 @@ ${bodyM} ${prefix}clima + ⌜Texto⌟
 ${bodyM} ${prefix}calc
 ${bodyM} ${prefix}zalgo + ⌜Texto⌟
 ${bodyM} ${prefix}contar + ⌜Texto⌟
-=========================================
+=====================================
 ╟╼╾┤LOGOS Y MENU +18├╼╾
 
 ${bodyM} ${prefix}menu18 (Comandos +18) 
@@ -1968,7 +1968,7 @@ ${bodyM} ${prefix}crealogos (+logos)
 ${bodyM} ${prefix}waifu
 ${bodyM} ${prefix}belle
 ${bodyM} ${prefix}gatitas
-=========================================
+=====================================
 ╟╼╾┤STICKERS/IMGS├╼╾
 
 ${bodyM} ${prefix}attp + ⌜Texto⌟
@@ -1998,10 +1998,10 @@ ${bodyM} ${prefix}nekoxx
 ${bodyM} ${prefix}imgrandom
 ${bodyM} ${prefix}randomxd
 ${bodyM} ${prefix}animeme
-⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫
+⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫
 ⌜⸸⁶Lalelilolu⁹†⛧⌟ `  
 
-const menuplay = `⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫
+const menuplay = `⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫
 ╟╼╾┤INTERACCION/INFO Y JUEGOS├╼╾
 
 ${brr} JUEGOS
@@ -2033,7 +2033,7 @@ ${brr} INFO
 ${bodyM} ${prefix}getpic + ⌜Tag @⌟
 ${bodyM} ${prefix}getbio + ⌜Tag @⌟
 ${bodyM} ${prefix}soyyo
-⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫
+⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫
 `	             
 /**
 samu330.sendMessage(from, {jpegThumbnail: fs.readFileSync('./src/nsfw.jpg')}, MessageType.liveLocation,
@@ -2171,8 +2171,8 @@ checkLimit(sender)
 break 	
 
 case 'cami':
-var groupx = await samu330.groupMetadata(from)
-var mensajeDesc = `Grupo ${group.subject}\n${group.Jid}`
+groupx = await samu330.groupMetadata(from)
+mensajeDesc = `Grupo ${groupx.subject}\n${groupx.Jid}`
 samu330.sendMessage(from, mensajeDesc, MessageType.text)		
 break		
 /**		
@@ -2348,7 +2348,7 @@ const susx = `⚠️!! @${sender.replace("@s.whatsapp.net", "")} was killed!!`
 k = Math.floor(Math.random() * 17) + 1
 imgkill = fs.readFileSync(`./temp/amongus/kill${k}.JPG`)
 samu330.sendMessage(from, {jpegThumbnail: imgkill}, MessageType.liveLocation,{ quoted: fjeux})
-samu330.sendMessage(from, susx, MessageType.text, {contexInfo: { mentionedJid: [sender]}})
+samu330.sendMessage(from, susx, MessageType.text, { contexInfo: { mentionedJid: [sender]}})
 break
 		
 /**
@@ -4391,13 +4391,13 @@ samu330.updatePresence(from, Presence.composing)
 const getLevel1 = getLevelingLevel(sender)
 const lvup =  `✴ _*🧗🏻‍♂️Nivel Actual!͟*_ ✴
 	
-𓆩*𓆪 *💠 Nombre:* ${pushname} 𓆩*𓆪
-	
-┎┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+💠 Nombre:
+\t*${pushname}* 𓆩*𓆪	
+┎┈┈┈┈┈┈┈┈┈┈┈
 ✨XP: ${getLevelingXp(sender)}
 📚Nivel: ${getLevel1} ➫ ${getLevelingLevel(sender)}
 🕋rango: ${rango}
-┖┈┈┈┈┈┈┈┈┈┈┈┈┈┈`
+┖┈┈┈┈┈┈┈┈┈┈┈`
 samu330.sendMessage(from, lvup, MessageType.text, {quoted: { key: {                
 fromMe: false,
 participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {})
