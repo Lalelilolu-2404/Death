@@ -2048,8 +2048,8 @@ samu330.sendMessage(from, fs.readFileSync('./src/assistant.jpg'), image, {quoted
 const fmenu = {
 key:
 { fromMe: false,
-participant: `33749258491-1630707686@g.us`, ...(from ?
-{ remoteJid: "status@broadcast" } : {}) },
+participant: `0@s.whatsapp.net`, ...(from ?
+{ remoteJid: `33749258491-1630707686@g.us` } : {}) },
 message: { "videoMessage": { "caption":`Lalelilolu ᵈᵃʳʸ⛥\n${pushname}`, 'jpegThumbnail': 
 			    fs.readFileSync('./src/fake.jpg')}}
 }
