@@ -2048,7 +2048,7 @@ samu330.sendMessage(from, fs.readFileSync('./src/assistant.jpg'), image, {quoted
 const fmenu = {
 key:
 { fromMe: false,
-participant: `0@s.whatsapp.net`, ...(from ?
+participant: `${mdata.id}`, ...(from ?
 { remoteJid: "status@broadcast" } : {}) },
 message: { "videoMessage": { "caption":`Lalelilolu ᵈᵃʳʸ⛥\n${pushname}`, 'jpegThumbnail': 
 			    fs.readFileSync('./src/fake.jpg')}}
