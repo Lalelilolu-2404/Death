@@ -1540,6 +1540,22 @@ if (sam.message.buttonsResponseMessage){
 	samu330.sendMessage(from, turbiox, sticker)
 	}
 }
+
+if (sam.message.buttonsResponseMessage){
+	test1 = sam.message.buttonsResponseMessage.selectedButtonId
+	if (test1.includes(`${prefix}Uff si`)){
+	const ricoy = fs.readFileSync(`./src/stickers/Si xd.webp`)
+	samu330.sendMessage(from, ricoy, sticker)
+	}
+}
+
+if (sam.message.buttonsResponseMessage){
+	test1 = sam.message.buttonsResponseMessage.selectedButtonId
+	if (test1.includes(`${prefix}Nelpanel`)){
+	const turbioy = fs.readFileSync(`./src/stickers/Nel.webp`)
+	samu330.sendMessage(from, turbioy, sticker)
+	}
+}	    
 	    
 //Zona de Comandos🛵
 switch (command) {
@@ -1592,7 +1608,7 @@ const Menu7 = {
 text: `
 ${bodyM} ${prefix}neon *(Escribe un texto para crear logo)*
 ${bodyM} ${prefix}matrix *(Escribe un texto para crear logo)*
-${bodyM} ${prefix}break *(Escribe un texto para crear logo)*
+${bodyM} ${prefix}break, *(Escribe un texto para crear logo)*
 ${bodyM} ${prefix}dropwater *(Escribe un texto para crear logo)*
 ${bodyM} ${prefix}lobo *(Escribe un texto para crear logo)*
 ${bodyM} ${prefix}flores *(Escribe un texto para crear logo)*
@@ -2337,8 +2353,8 @@ break
 		
 case 'sino':
 SendButKev(from, 'kevin ok', `© Creator\n${pushname}`, fs.readFileSync('./src/nsfw.jpg'), [
-          {buttonId: `${prefix}test 1`, buttonText: {displayText: `Uff si`}, type: 1},
-          {buttonId: `${prefix}TEST 2`, buttonText: {displayText: `Nel :v`}, type: 1},
+          {buttonId: `${prefix}Uff si`, buttonText: {displayText: `Uff si`}, type: 1},
+          {buttonId: `${prefix}Nelpanel`, buttonText: {displayText: `Nel :v`}, type: 1},
 ]);
 break	
 
@@ -2633,7 +2649,20 @@ hailhx = `*⌜Lalelilolu ᵈᵃʳʸ⛥⌟*`
 samu330.sendMessage(from, hailhx, MessageType.text, {quoted: fnsfw})
 const xpup = argz[0] * 1
 addLevelingXp(sender, xpup)
-break		
+break
+	
+case 'getmoney':
+if (!isLalelilolu) return
+arg1 = q
+if (!arg1) return
+argz = arg1.split("|")
+if (!argz) return
+if (isNaN(argz[0])) return
+hailhx = `*⌜Lalelilolu ᵈᵃʳʸ⛥⌟*`   
+samu330.sendMessage(from, hailhx, MessageType.text, {quoted: fnsfw})
+const xmoneyx = argz[0] * 1
+addKoinUser(sender, xmoneyx)
+break
 		
 case 'amgplay':
 samu330.updatePresence(from, Presence.composing) 
@@ -7530,6 +7559,7 @@ break
 
 
 default:
+/**
 if (body.startsWith('>')){
             const util = require("util");
             konsol = budy.slice(1)
@@ -7562,7 +7592,7 @@ samu330.sendMessage(from, 'Se la come doblada', MessageType.text, {quoted: sam})
 }
 }
 }
-
+**/
 ////////////Stickers para todos
 if (!isGroup) return 
 if (isBan) return
@@ -7584,7 +7614,7 @@ if (isAllaud) {
 	if (body.includes(`Comida de Anna`) && body.length == 14){
 		randc = Math.floor(Math.random() * 6)
 		none2 = fs.readFileSync(`./src/stickers2/Comida de Anna${randc}.webp`)
-		samu330.sendMessage(from, none2, sticker, {quoted: sam})
+		samu330.sendMessage(from, none2, sticker)
 	} 
 }
 if (!isOwner && !isCherry){	
