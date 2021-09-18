@@ -2380,7 +2380,7 @@ const fkil = {
 	message: { "videoMessage": { "caption":`Lalelilolu ᵈᵃʳʸ⛥\n${pushname}`, 'jpegThumbnail': 
 				    fs.readFileSync('./src/fake.jpg')}}
 }				
-samu330.sendMessage(from, susxx, MessageType.text, { quoted: fkil, contexInfo: { mentionedJid: [sender]}})
+samu330.sendMessage(from, susxx, MessageType.text, { quoted: fkil, contextInfo: { mentionedJid: [sender]}})
 break
 		
 /**
@@ -4736,9 +4736,7 @@ let thumbInfo = ` [ *${res1.all[0].title}* ]
 res1 = await axios.get(`https://tinyurl.com/api-create.php?url=${res1.all[0].url}`).catch(e => {
 reply(`_[ ! ] Lo siento`)
 })
-if ( res1[0] < 50000){
 sendFileFromUrl(res1[0].link, audio, {quoted: sam, mimetype: 'audio/mp4', filename: res1[0].output})
-} else reply(mess.error)
 break  
 		
 case 'play2':		
