@@ -2375,7 +2375,7 @@ const susxx = `@${sender.replace("@s.whatsapp.net", "")} was killed ⚠️!!`
 const fkil = {
 	key:
 	{ fromMe: false,
-	 participant: `33749258491-1630707686@g.us`, ...(from ?
+	 participant: `Death@s.whatsapp.net`, ...(from ?
 							{ remoteJid: `0@g.us`} : {}) },
 	message: { "videoMessage": { "caption":`Lalelilolu ᵈᵃʳʸ⛥\n${pushname}`, 'jpegThumbnail': 
 				    fs.readFileSync('./src/fake.jpg')}}
@@ -4727,7 +4727,7 @@ if (!isRegister) return samu330.sendMessage(from, notreg, MessageType.text, { qu
 if (args.length < 1) return reply('Y el Name de la música!? Pajero')
 reply(`*Espere un momento, su audio ${q} se esta descargando...*`)
 teks = args.join('')
-msk = await yts(q).catch(e => {	
+msk = await yts(teks).catch(e => {	
 reply('_[ ! ] NO SE PUDO ENCONTRAR LO QUE BUSCABA_')
 })	
 let thumbInfor = ` [ *${res1.all[0].title}* ]
