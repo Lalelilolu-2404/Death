@@ -1575,8 +1575,8 @@ addLevelingXp(sender, 20)
 
 sendButLocation(from, ` *Hola : @${sender.replace("@s.whatsapp.net", "")}*\n\n${Menux}`, `© Creator\n⛧⸸⁶Death⁹†حب♡ت`, 
 		{jpegThumbnail: fs.readFileSync('./src/+18.jpg')}, [
-          {buttonId: 'Rikolino', buttonText: {displayText: `Rico :3`}, type: 1},
-          {buttonId: 'Returbio', buttonText: {displayText: `Re Turbio`}, type: 1},
+          {buttonId: `Rikolino`, buttonText: {displayText: `Rico :3`}, type: 1},
+          {buttonId: `Returbio`, buttonText: {displayText: `Re Turbio`}, type: 1},
 ], { contextInfo: { mentionedJid: [sender]}}
 	       );	
 		
@@ -5600,7 +5600,7 @@ ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gamb
 veri = sender                                                
 addRegisteredUser(sender, nombre, edad, time, serialUser)
 addATM(sender)
-buyLimit(sender, limitawal)
+buyLimit(sender, 15)
 try {
 exec(`magick './src/reg.jpg' -gravity west -fill '#00FF00' -font './src/font-gue.ttf' -size 1280x710 -pointsize 90 -interline-spacing 7.5 -annotate +460-45 '${nombre}' -pointsize 50 -annotate +460+200 '${serialUser}' '${ppimg}' -resize %[fx:t?u.w*0.2:u.w]x%[fx:?u.h*0.2:u.h] -gravity center -geometry -430+70 -composite 'regsm.jpg'`)
 samu330.sendMessage(from, fs.readFileSync('./regsm.jpg'), MessageType.image, { quoted: sam, caption: `*「 SU REGISTRO FUE UN EXITO 」*\n\n *◦ Nombre : ${nombre}*\n*◦ Numero : wa.me/${sender.split("@")[0]}*\n*◦ Edad : ${edad}*\n*◦ Hora De Registro : ${time}*\n*◦ SN : ${serialUser}*\n\n *Usa : ${prefix}menu*`})
