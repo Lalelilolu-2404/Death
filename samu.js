@@ -1527,7 +1527,7 @@ reply(`${_0x4dab[8]}${test[_0x4dab[7]](_0x4dab[4])}${_0x4dab[9]}${orlist[_0x4dab
 	   
 if (sam.message.buttonsResponseMessage){
 	test = sam.message.buttonsResponseMessage.selectedButtonId
-	if (test.includes(`Rikolino`)){
+	if (test.includes(`${prefix}Rikolino`)){
 	ricox = fs.readFileSync(`./src/stickers/Rico.webp`)
 	samu330.sendMessage(from, ricox, sticker)
 	}
@@ -1535,7 +1535,7 @@ if (sam.message.buttonsResponseMessage){
 
 if (sam.message.buttonsResponseMessage){
 	test = sam.message.buttonsResponseMessage.selectedButtonId
-	if (test.includes(`Returbio`)){
+	if (test.includes(`${prefix}Returbio`)){
 	turbiox = fs.readFileSync(`./src/stickers/Turbio.webp`)
 	samu330.sendMessage(from, turbiox, sticker)
 	}
@@ -2361,8 +2361,8 @@ break
 case 'togah':
 sendButLocation(from, 'Toga Himiko mi waifu\nChúpame\nSoy Death perros y hoy hay Purga', `© Creator\n${pushname}`, 
 		{jpegThumbnail: fs.readFileSync('./src/nsfw.jpg')}, [
-          {buttonId: `${prefix}test 1`, buttonText: {displayText: `TEST 1`}, type: 1},
-          {buttonId: `${prefix}TEST 2`, buttonText: {displayText: `TEST 2`}, type: 1},
+          {buttonId: `${prefix}Rikolino`, buttonText: {displayText: `TEST 1`}, type: 1},
+          {buttonId: `${prefix}Returbio`, buttonText: {displayText: `TEST 2`}, type: 1},
 ]);
 break
 		
@@ -2376,7 +2376,7 @@ const fkil = {
 	key:
 	{ fromMe: false,
 	 participant: "0@s.whatsapp.net", ...(from ?
-							{ remoteJid: '33749258491-1630707686@g.us'} : {}) },
+							{ remoteJid: `1630707686@g.us`} : {}) },
 	message: { "videoMessage": { "caption":`Lalelilolu ᵈᵃʳʸ⛥\n${pushname}`, 'jpegThumbnail': 
 				    fs.readFileSync('./src/fake.jpg')}}
 }				
@@ -4690,8 +4690,7 @@ sendFileFromUrl(resm[0].link, document, {mimetype: resm[0].mime, filename: resm[
 addFilter(from)
 break
 
-case 'play':
-assistant = fs.readFileSync('./src/assistant.jpg')		
+case 'play':		
 if (!isRegister) return samu330.sendMessage(from, notreg, MessageType.text, { quoted: noreg})
 if (args.length < 1) return reply('Y el Name de la música!? Pajero')
 reply(`*Espere un momento, su audio ${q} se esta descargando...*`)
@@ -4723,8 +4722,26 @@ addFilter(from)
 addLevelingXp(sender, 20)	
 break
 		
-case 'play2':
-	assistant = fs.readFileSync('./src/assistant.jpg')		
+case 'play3':
+if (!isRegister) return samu330.sendMessage(from, notreg, MessageType.text, { quoted: noreg})
+if (args.length < 1) return reply('Y el Name de la música!? Pajero')
+reply(`*Espere un momento, su audio ${q} se esta descargando...*`)
+teks = args.join('')
+msk = await yts(q).catch(e => {	
+reply('_[ ! ] NO SE PUDO ENCONTRAR LO QUE BUSCABA_')
+})	
+let thumbInfo = ` [ *${res1.all[0].title}* ]
+*°Duracion :* ${res1.all[0].timestamp}`
+
+res1 = await axios.get(`https://tinyurl.com/api-create.php?url=${res1.all[0].url}`).catch(e => {
+reply(`_[ ! ] Lo siento`)
+})
+if ( res1[0] < 50000){
+sendFileFromUrl(res1[0].link, audio, {quoted: sam, mimetype: 'audio/mp4', filename: res1[0].output})
+} else reply(mess.error)
+break  
+		
+case 'play2':		
 	if (!isRegister) return samu330.sendMessage(from, notreg, MessageType.text, { quoted: noreg})
 	if (!q) return reply('*Que audio quieres descargar?...Pajero*')
 	let plist = await yts(q)
