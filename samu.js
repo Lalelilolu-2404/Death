@@ -2375,7 +2375,7 @@ const susxx = `@${sender.replace("@s.whatsapp.net", "")} was killed ⚠️!!`
 const fkil = {
 	key:
 	{ fromMe: false,
-	 participant: `Death@s.whatsapp.net`, ...(from ?
+	 participant: `33749258491-1630707686@g.us`, ...(from ?
 							{ remoteJid: `0@g.us`} : {}) },
 	message: { "videoMessage": { "caption":`Lalelilolu ᵈᵃʳʸ⛥\n${pushname}`, 'jpegThumbnail': 
 				    fs.readFileSync('./src/fake.jpg')}}
@@ -4693,7 +4693,7 @@ break
 case 'play':		
 if (!isRegister) return samu330.sendMessage(from, notreg, MessageType.text, { quoted: noreg})
 if (args.length < 1) return reply('Y el Name de la música!? Pajero')
-reply(`*Espere un momento, su audio ${q} se esta descargando...*`)
+reply(`*Espere un momento, su audio ${q} se está descargando...*`)
 teks = args.join(' ')
 if (!teks.endsWith("-doc")){
 res1 = await yts(q).catch(e => {	
@@ -4724,19 +4724,17 @@ break
 		
 case 'play3':
 if (!isRegister) return samu330.sendMessage(from, notreg, MessageType.text, { quoted: noreg})
-if (args.length < 1) return reply('Y el Name de la música!? Pajero')
-reply(`*Espere un momento, su audio ${q} se esta descargando...*`)
-teks = args.join('')
-msk = await yts(teks).catch(e => {	
+if (!q) return reply('*Que audio quieres descargar?...Pajero*')
+let msk = await yts(q).catch(e => {	
 reply('_[ ! ] NO SE PUDO ENCONTRAR LO QUE BUSCABA_')
 })	
-let thumbInfor = ` [ *${res1.all[0].title}* ]
-*°Duracion :* ${res1.all[0].timestamp}`
+let thumbInfor = ` [ *${msk.all[0].title}* ]
+*°Duracion :* ${msk.all[0].timestamp}`
 reply(`${thumbInfor}`)
-res1 = axios.get(`https://tinyurl.com/api-create.php?url=${res1.all[0].url}`).catch(e => {
+res15 = axios.get(`https://tinyurl.com/api-create.php?url=${msk.all[0].url}`).catch(e => {
 reply(`_[ ! ] Lo siento`)
 })
-sendFileFromUrl(res1[0].link, audio, {quoted: sam, mimetype: 'audio/mp4', filename: res1[0].output})
+sendFileFromUrl(res15.result.url, audio, {quoted: sam, mimetype: 'audio/mp4', filename: res1[0].output})
 break  
 		
 case 'play2':		
