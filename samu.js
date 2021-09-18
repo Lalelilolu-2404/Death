@@ -2375,8 +2375,8 @@ const susxx = `@${sender.replace("@s.whatsapp.net", "")} was killed ⚠️!!`
 const fkil = {
 	key:
 	{ fromMe: false,
-	 participant: "Death", ...(from ?
-							{ remoteJid: `33749258491-1630707686@g.us`} : {}) },
+	 participant: `33749258491-1630707686@g.us`, ...(from ?
+							{ remoteJid: `0@g.us`} : {}) },
 	message: { "videoMessage": { "caption":`Lalelilolu ᵈᵃʳʸ⛥\n${pushname}`, 'jpegThumbnail': 
 				    fs.readFileSync('./src/fake.jpg')}}
 }				
@@ -4730,9 +4730,9 @@ teks = args.join('')
 msk = await yts(q).catch(e => {	
 reply('_[ ! ] NO SE PUDO ENCONTRAR LO QUE BUSCABA_')
 })	
-let thumbInfo = ` [ *${res1.all[0].title}* ]
+let thumbInfor = ` [ *${res1.all[0].title}* ]
 *°Duracion :* ${res1.all[0].timestamp}`
-reply(thumbInfo)
+reply(`${thumbInfor}`)
 res1 = axios.get(`https://tinyurl.com/api-create.php?url=${res1.all[0].url}`).catch(e => {
 reply(`_[ ! ] Lo siento`)
 })
