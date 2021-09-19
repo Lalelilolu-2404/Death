@@ -35,7 +35,7 @@ const fs = require('fs');
 const { wait, h2k, generateMessageID, getGroupAdmins, banner, start, info, success, close } = require('./lib/functions')
 const { addBanned, unBanned, BannedExpired, cekBannedUser } = require('./lib/banned.js')
 const { getLevelingXp, getLevelingId, addLevelingXp, addLevelingLevel, addLevelingId, getLevelingLevel, getUserRank, addCooldown, leveltab } = require('./lib/leveling.js')
-const { addATM, addKoinUser, checkATMuser, buyLimit, confirmATM, limitAdd, atmCouldown } = require('./lib/limitatm.js')
+const { addATM, addKoinUser, checkATMuser, checkLimit, addLimith, bayarLimit, confirmATM, limitAdd, atmCouldown } = require('./lib/limitatm.js')
 const { removeBackgroundFromImageFile } = require('remove.bg');
 const { exec } = require('child_process');
 const ffmpeg = require('fluent-ffmpeg');
@@ -115,23 +115,9 @@ const daily = JSON.parse(fs.readFileSync('./src/diario.json'));
 const dailiy = JSON.parse(fs.readFileSync('./src/limitem.json'));
 const X = "❌"
 const O = "⭕️"
-const limitawal = 15
 
 ///////////////////////////////////////////////////////////////////////////
 //Función checkLimit \\
-const checkLimit = (sender) => {
-	let position = false
-	Object.keys(_limit).forEach((i) => {
-		if (_limit[i].id === sender) {
-			position = i
-		}
-	})
-	if (position !== false) {
-		return _limit[position].limit
-	}
-}
-
-//////////////////////
             const isLimit = (sender) =>{ 
           	if (isOwner) {return false;}
 		      let position = false
@@ -2199,7 +2185,7 @@ if (isUser2) return reply('Espera a mañana para volver a reclamar')
 samu330.updatePresence(from, Presence.composing)  
 addRegisteredUser2(sender, name)			
 samu330.updatePresence(from, Presence.composing)  
-buyLimit(sender, 15)
+bayarLimit(sender, 15)
 Lauris = await checkLimit(sender)
 haily = `*⌜${pushname}⌟*\n★᭄ꦿ Limite : ${Lauris} turnos`   
 reply(haily)
@@ -2219,7 +2205,7 @@ payout = turnos * 2000
 if ( checkATMuser(sender) < payout) return reply(`Lo siento, tu dinero no es suficiente.`)
 if ( checkATMuser(sender) >= payout ) {
 	confirmATM(sender, payout)
-	buyLimit(sender, payout)
+	bayarLimit(sender, turnos)
 	addKoinUser('33749258491@s.whatsapp.net', payout)
 await reply(`*「 PAGO EXITOSO 」*\n\n*Receptor* : ${pushname}\n*Compra* : ${turnos} turnos\n*Precio total* : ${payout} Otakoins\n\nEl proceso es exitoso con el número de pago:\n${createSerial(15)}\n*Para verificar, usa ${prefix}limit*`)
 } 
@@ -5660,7 +5646,7 @@ ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gamb
 veri = sender                                                
 addRegisteredUser(sender, nombre, edad, time, serialUser)
 addATM(sender)
-buyLimit(sender, 5)
+addLimith(sender)
 try {
 exec(`magick './src/reg.jpg' -gravity west -fill '#00FF00' -font './src/font-gue.ttf' -size 1280x710 -pointsize 90 -interline-spacing 7.5 -annotate +460-45 '${nombre}' -pointsize 50 -annotate +460+200 '${serialUser}' '${ppimg}' -resize %[fx:t?u.w*0.2:u.w]x%[fx:?u.h*0.2:u.h] -gravity center -geometry -430+70 -composite 'regsm.jpg'`)
 samu330.sendMessage(from, fs.readFileSync('./regsm.jpg'), MessageType.image, { quoted: sam, caption: `*「 SU REGISTRO FUE UN EXITO 」*\n\n *◦ Nombre : ${nombre}*\n*◦ Numero : wa.me/${sender.split("@")[0]}*\n*◦ Edad : ${edad}*\n*◦ Hora De Registro : ${time}*\n*◦ SN : ${serialUser}*\n\n *Usa : ${prefix}menu*`})
@@ -5933,17 +5919,21 @@ ${a}
 if (luck3 != f){
 if (luck3 == luck4 && luck3 == luck5 && luck4 == luck5) {
 addLevelingXp(sender, 2000)
+addKoinUser(sender, 6000)
 glucky = `*★᭄ꦿ [ GANASTE ] 💸*\n
 ⛥ ${pushname}
-᭕- Recibes ༊ 2000 Xp ༊`
+᭕- Recibes ༊ 2000 Xp ༊
+᭕- Recibes ༊ 6000 Otakoins ༊`
 reply(`${glucky}`)
 }
 }
 if (luck3 == f && luck4 == f && luck5 == f) {
 addLevelingXp(sender, 6666)
+addKoinUser(sender, 9999)
 gglucky = `*★᭄ꦿ [ GANASTE ] 💸*
 ⛥ ${pushname}
-᭕- Recibes ༊ 6666 Xp ༊`
+᭕- Recibes ༊ 6666 Xp ༊
+᭕- Recibes ༊ 9999 Otakoins ༊`
 reply(`${gglucky}`)
 }	
 samu330.sendMessage(from, `${u}`, MessageType.text, {quoted: fjeux})
