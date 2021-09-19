@@ -7713,8 +7713,8 @@ if (!isAllaud) return
 	}
 }
 //////////////	
-const morestick = ["Abasho", "Lean las reglas", "Nel mijo", "Se la coge", "Soy inevitable", "Le mete el brazo", "Pum", "Semen", "No viste nada", 
-		   "Fbi", "X el chikito", "Nel pastel", "Desprecio1", "Desprecio2", "Desprecio3", "Se relaja", "Colitax"]	
+const morestick = ["Abasho", "Lean las reglas", "Nel mijo", "Se la coge", "Soy inevitable", "Le mete el brazo", "Pum", "Semen", "No viste nada", "Fbi", "X el chikito", 
+		   "Nel pastel", "Desprecio1", "Desprecio2", "Desprecio3", "Se relaja", "Colitax"]	
 
 if (isLalelilolu){
 if (!isAllaud) return
