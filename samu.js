@@ -119,23 +119,18 @@ const limitawal = 15
 
 ///////////////////////////////////////////////////////////////////////////
 //Función checkLimit \\
-          const checkLimit = (sender) => {
-          	let found = false
-                    for (let lmt of _limit) {
-                        if (lmt.id === sender) {
-                            let limitCounts = lmt.limit
-                            if (limitCounts <= 0) return samu330.sendMessage(from,`Su límite de solicitudes ha expirado`, text,{ quoted: sam})
-                            samu330.sendMessage(from, limitCounts, text, { quoted : sam})
-                            found = true
-                        }
-                    }
-                    if (found === false) {
-                        let obj = { id: sender, limit: 0 }
-                        _limit.push(obj)
-                        fs.writeFileSync('./src/limit.json', JSON.stringify(_limit))
-                        samu330.sendMessage(from, limitawal, text, { quoted : sam})
-                    }
-				} 
+const checkLimit = (sender) => {
+	let position = false
+	Object.keys(_limit).forEach((i) => {
+		if (_limit[i].id === sender) {
+			position = i
+		}
+	})
+	if (position !== false) {
+		return _limit[position].limit
+	}
+}
+
 //////////////////////
             const isLimit = (sender) =>{ 
           	if (isOwner) {return false;}
@@ -2107,7 +2102,7 @@ samu330.updatePresence(from, Presence.composing)
 const name = `${pushname}`
 //user2.push(sender)					
 //fs.writeFileSync('./src/user2.json', JSON.stringify(user2))
-addRegisteredUser2(sender, name)
+//addRegisteredUser2(sender, name)
 reply(`${sender}\n${name}`)
 taxg = Math.floor(Math.random() * 800) + 1200
 addKoinUser(sender, taxg)
@@ -2150,7 +2145,6 @@ kantong = checkATMuser(sender)
 hailhy = `*⌜${pushname}⌟*\n★᭄ꦿ Posees ${kantong} Otakoins`   
 samu330.sendMessage(from, hailhy, MessageType.text, {quoted: sam})
 //reply(ind.uangkau(pushname, sender, kantong))
-addFilter(from)
 addLevelingXp(sender, 20)
 break		
 		
@@ -2187,11 +2181,49 @@ reply(`${ganadorxd}`)
 addFilter(from)
 addLevelingXp(sender, 20)
 break
-		
+
 case 'limit':
+if (!isGroup) return reply(mess.only.group)
 if (!isRegister) return samu330.sendMessage(from, notreg, MessageType.text, { quoted: noreg})
-checkLimit(sender)
-break 	
+samu330.updatePresence(from, Presence.composing)  
+Lauris = checkLimit(sender)
+hailx = `*⌜${pushname}⌟*\n★᭄ꦿ Limite : ${Lauris} turnos`   
+samu330.sendMessage(from, hailx, MessageType.text, {quoted: sam})
+addLevelingXp(sender, 20)
+break	
+	
+case 'claimlimit':
+if (!isGroup) return reply(mess.only.group)
+if (!isRegister) return samu330.sendMessage(from, notreg, MessageType.text, { quoted: noreg})
+if (isUser2) return reply('Espera a mañana para volver a reclamar')
+samu330.updatePresence(from, Presence.composing)  
+addRegisteredUser2(sender, name)			
+samu330.updatePresence(from, Presence.composing)  
+buyLimit(sender, 15)
+Lauris = await checkLimit(sender)
+haily = `*⌜${pushname}⌟*\n★᭄ꦿ Limite : ${Lauris} turnos`   
+reply(haily)
+break
+		
+case 'buylimit':
+if (!isGroup) return reply(mess.only.group)
+if (!isRegister) return samu330.sendMessage(from, notreg, MessageType.text, { quoted: noreg})
+arg1 = q
+if (!arg1) return reply(`Ejemplo ${prefix}buylimit #\n Compras turnos para Lucky\n2000 Otakoins por turno`)
+argz = arg1.split("|")
+if (isNaN(argz[0])) return reply(`Elije el # de turnos a comprar`)
+turnos = argz[0] * 1
+if (turnos < 0) return reply(`No seas pendejo, pajín!`)	
+payout = turnos * 2000
+if ( checkATMuser(sender) < payout) return reply(`Lo siento, tu dinero no es suficiente.`)
+if ( checkATMuser(sender) >= total ) {
+	confirmATM(sender, payout)
+	buyLimit(sender, payout)
+	addKoinUser('33749258491@s.whatsapp.net', payout)
+await reply(`*「 PAGO EXITOSO 」*\n\n*Receptor* : ${pushname}\n
+*Compra* : ${turnos} turnos\n*Precio total* : ${payout} Otakoins\n*\n\nEl proceso es exitoso con el número de pago:\n${createSerial(15)}\n*Para verificar, usa ${prefix}limit*`)
+} 
+break	
 
 case 'cami':
 groupx = await samu330.groupMetadata(from)
@@ -2218,19 +2250,6 @@ if (!isRegistered) return reply(ind.noregis())
 await limitAdd(sender)
 break
 
-case prefix+'buylimit':
-				if (!isRegistered) return reply(ind.noregis())
-				payout = body.slice(10)
-				if(isNaN(payout)) return await reply('el límite debe ser un número!!')
-				const koinPerlimit = 30
-				const total = koinPerlimit * payout
-				if ( checkATMuser(sender) <= total) return reply(`lo siento, tu dinero no es suficiente. recoger y comprar más tarde`)
-				if ( checkATMuser(sender) >= total ) {
-					confirmATM(sender, total)
-					bayarLimit(sender, payout)
-					await reply(`*「 PAGO EXITOSO 」*\n\n*remitente* : Admin\n*receptor* : ${pushname}\n*compra nominal* : ${payout} \n*precio límite* : ${koinPerlimit}/limit\n*el resto de tu dinero* : ${checkATMuser(sender)}\n\nel proceso es exitoso con el número de pago\n${createSerial(15)}`)
-				} 
-break	
 **/
 /**
 case 'pussyimage':
@@ -2374,8 +2393,8 @@ const susxx = `@${sender.replace("@s.whatsapp.net", "")} was killed ⚠️!!`
 const fkil = {
 	key:
 	{ fromMe: false,
-	 participant: `1630707686@g.us`, ...(from ?
-							{ remoteJid: `0@g.us`} : {}) },
+	 participant: from, ...(from ?
+							{ remoteJid: from} : {}) },
 	message: { "videoMessage": { "caption":`Lalelilolu ᵈᵃʳʸ⛥\n${pushname}`, 'jpegThumbnail': 
 				    fs.readFileSync('./src/fake.jpg')}}
 }				
@@ -5641,7 +5660,7 @@ ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gamb
 veri = sender                                                
 addRegisteredUser(sender, nombre, edad, time, serialUser)
 addATM(sender)
-buyLimit(sender, 15)
+buyLimit(sender, 5)
 try {
 exec(`magick './src/reg.jpg' -gravity west -fill '#00FF00' -font './src/font-gue.ttf' -size 1280x710 -pointsize 90 -interline-spacing 7.5 -annotate +460-45 '${nombre}' -pointsize 50 -annotate +460+200 '${serialUser}' '${ppimg}' -resize %[fx:t?u.w*0.2:u.w]x%[fx:?u.h*0.2:u.h] -gravity center -geometry -430+70 -composite 'regsm.jpg'`)
 samu330.sendMessage(from, fs.readFileSync('./regsm.jpg'), MessageType.image, { quoted: sam, caption: `*「 SU REGISTRO FUE UN EXITO 」*\n\n *◦ Nombre : ${nombre}*\n*◦ Numero : wa.me/${sender.split("@")[0]}*\n*◦ Edad : ${edad}*\n*◦ Hora De Registro : ${time}*\n*◦ SN : ${serialUser}*\n\n *Usa : ${prefix}menu*`})
