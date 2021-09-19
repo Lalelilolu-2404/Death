@@ -1639,6 +1639,9 @@ stckr = `╭⸻⃞✫꯭𝙈꯭𝙀꯭𝙉꯭𝙐꯭✫⃞⸻╮
 ╭─────────────
 │ *Amm*
 │ *Ban*
+│ *Colita*
+│ *Comida de Anna*
+│ *Gansito*
 │ *Funao*
 │ *Love*
 │ *Ya se durmieron*
@@ -1764,7 +1767,7 @@ break
 ////////////Stickers me
 
 case 'forme':
-const morestickx = ["Abasho", "Lean las reglas", "Nel mijo", "Se la coge", "Soy inevitable", "Le mete el brazo", 
+const morestickx = ["Abasho", "Lean las reglas", "Nel mijo", "Se la coge", "Soy inevitable", "Le mete el brazo", "Pum", "Semen", "No viste nada"
 		  "Fbi", "X el chikito", "Xd", "Comida de Anna", "Nel pastel", "Despreciox", "Se relaja", "Colitax"]		
 const onlyme = ["69", "Ahohsi", "Alto", "A mira nomás", "A2", "Abrazo", "Ah ok", "Ahh", "Amistad", "Anna", "Amm", "Anni", "Así me gusta", "Asustado", "Ay caramba", "Ay me asusté", 
 		"Ban", "Báñate", "Besos", "Bien", "Bragas", "Buen culo", "Buenas noches", "Bye", "C rasca", "Cállate", "Cc", "Chelitas", "Chongo", "Colita", "Colitaxxx", 
@@ -7638,15 +7641,20 @@ if (isAllaud) {
 		}
 	} 
 	if (body.includes(`Comida de Anna`) && body.length == 14){
-		randc = Math.floor(Math.random() * 6)
+		randc = Math.floor(Math.random() * 7)
 		none2 = fs.readFileSync(`./src/stickers2/Comida de Anna${randc}.webp`)
+		samu330.sendMessage(from, none2, sticker)
+	} 
+	if (body.includes(`Gansito`) && body.length == 7){
+		randc = Math.floor(Math.random() * 5)
+		none2 = fs.readFileSync(`./src/stickers2/Gansito${randc}.webp`)
 		samu330.sendMessage(from, none2, sticker)
 	} 
 }
 if (!isOwner && !isCherry){	
 if (!isAllaud) return
-const Fer =  ["Me das admin", "Ban", "Funao", "Love", "Ya se durmieron", "Te me calmas", "Ta fuerte", "Takeself", "Hahaha", "Hola", "Faptality", "F el grupo", "Ctm", "Shh", "Nani", 
-	      "Lolxd", "F", "Amm", "Pichula", "Si xd", "Haha no", "Paja2", "Perro", "Ufff"]		
+const Fer =  ["Me das admin", "Ban", "Funao", "Love", "Ya se durmieron", "Te me calmas", "Ta fuerte", "Takeself", "Hahaha", "Hola", "Faptality", "F el grupo", "Ctm", "Shh", 
+	      "Nani", "Lolxd", "F", "Amm", "Pichula", "Si xd", "Haha no", "Paja2", "Perro", "Ufff", "Colita"]		
   if (!isBan){
 	for (let i = 0; i < Fer.length; i++){
 		if (body.includes(`${Fer[i]}`) && body.length == Fer[i].length){
@@ -7683,7 +7691,7 @@ if (!isAllaud) return
 const stickme = ["69", "Ahohsi", "Alto", "A mira nomás", "A2", "Abrazo", "Ah ok", "Ahh", "Amistad", "Anna", "Amm", "Anni", "Así me gusta", "Asustado", "Ay caramba", "Ay me asusté", 
 		"Ban", "Báñate", "Besos", "Bien", "Bragas", "Buen culo", "Buenas noches", "Bye", "C rasca", "Cállate", "Cc", "Chelitas", "Chongo", "Colita", "Colitaxxx", 
 		"Contesta", "Contra el muro", "Ctm", "Cunni", "Dame", "Delito", "Depre", "Doncon", "Duren", "En fin", "Encuérate", "Eres bonita", "F el grupo", "F en el chat", 
-		"F", "Facha", "Fallesí", "Faptality", "FBI", "Flap", "Funao", "Gansito", "Gatita", "Gomitas", "Háblame bonito", "Hack", "Haha no", "Hahaha", "Helado", "Hentai", "Hola", 
+		"F", "Facha", "Fallesí", "Faptality", "FBI", "Flap", "Funao", "Gatita", "Gomitas", "Háblame bonito", "Hack", "Haha no", "Hahaha", "Helado", "Hentai", "Hola", 
 		"I wanna fuck you", "Ily", "Im dead", "Inflingir", "Jálame", "Jiji", "Jutsu", "Kuaker", "La ahorca", "La ata", "La nalguea", "Las bragitas", "Lau", "Le muerde", 
 		"Lit", "Llegó papi", "Lolxd", "Lo mira feo", "Love", "Ly", "Me das admin", "Me dormí", "Me encanta", "Me prometiste", "Me vengo", "Meyou", "Mimitos", "Muy bien", 
 		"Nani", "Nel", "No antojes", "No me interesa", "No mires", "No puede ser", "No sé", "No te excites", "No te rías xd", "Oh yeah mami", "Onichan", "Ouioui", 
@@ -7703,8 +7711,8 @@ if (!isAllaud) return
 	}
 }
 //////////////	
-const morestick = ["Abasho", "Lean las reglas", "Nel mijo", "Se la coge", "Soy inevitable", "Le mete el brazo", 
-		  "Fbi", "X el chikito", "Nel pastel", "Desprecio1", "Desprecio2", "Desprecio3", "Se relaja", "Colitax"]	
+const morestick = ["Abasho", "Lean las reglas", "Nel mijo", "Se la coge", "Soy inevitable", "Le mete el brazo", "Pum", "Semen", "No viste nada", 
+		   "Fbi", "X el chikito", "Nel pastel", "Desprecio1", "Desprecio2", "Desprecio3", "Se relaja", "Colitax"]	
 
 if (isLalelilolu){
 if (!isAllaud) return
@@ -7727,7 +7735,7 @@ if (body.includes(`Xd`) && body.length == 2){
 			//body: '',
 			//sourceUrl : 'https://chat.whatsapp.com/LKZOC09DoJb6lwS5UUZRlj', 
 			//sourceUrl : 'https://api.whatsapp.com/send?phone=12729998838',
-			sourceUrl : 'https://wa.me/12729998838', 
+			//sourceUrl : 'https://wa.me/12729998838', 
 			thumbnail : fs.readFileSync('./src/nsfw.jpg')}}}
 		)
 }
