@@ -2183,8 +2183,8 @@ if (!isGroup) return reply(mess.only.group)
 if (!isRegister) return samu330.sendMessage(from, notreg, MessageType.text, { quoted: noreg})
 if (isUser2) return reply('Espera a mañana para volver a reclamar')
 samu330.updatePresence(from, Presence.composing)  
-const name = `${pushname}`
-addRegisteredUser2(sender, name)			
+const nameturn = `${pushname}`
+addRegisteredUser2(sender, nameturn)			
 bayarLimit(sender, 15)
 const lauxx = await checkLimit(sender)
 haily = `*⌜${pushname}⌟*\n★᭄ꦿ Limite : ${lauxx} turnos`   
