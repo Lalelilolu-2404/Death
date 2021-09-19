@@ -2089,10 +2089,10 @@ const name = `${pushname}`
 //user2.push(sender)					
 //fs.writeFileSync('./src/user2.json', JSON.stringify(user2))
 //addRegisteredUser2(sender, name)
-reply(`${sender}\n${name}`)
+//reply(`${sender}\n${name}`)
 taxg = Math.floor(Math.random() * 800) + 1200
 addKoinUser(sender, taxg)
-reply(`Recibiste ${taxg} Otakoins`)
+reply(`${pushname}\nRecibiste ${taxg} Otakoins`)
 ATMCouldown(sender)
 addLevelingXp(sender, 20)
 break		
@@ -2183,12 +2183,12 @@ if (!isGroup) return reply(mess.only.group)
 if (!isRegister) return samu330.sendMessage(from, notreg, MessageType.text, { quoted: noreg})
 if (isUser2) return reply('Espera a mañana para volver a reclamar')
 samu330.updatePresence(from, Presence.composing)  
+const name = `${pushname}`
 addRegisteredUser2(sender, name)			
-samu330.updatePresence(from, Presence.composing)  
 bayarLimit(sender, 15)
-Lauris = await checkLimit(sender)
-haily = `*⌜${pushname}⌟*\n★᭄ꦿ Limite : ${Lauris} turnos`   
-reply(haily)
+const lauxx = await checkLimit(sender)
+haily = `*⌜${pushname}⌟*\n★᭄ꦿ Limite : ${lauxx} turnos`   
+reply(`${haily}`)
 break
 		
 case 'buylimit':
