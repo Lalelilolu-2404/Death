@@ -2379,8 +2379,8 @@ const susxx = `@${sender.replace("@s.whatsapp.net", "")} was killed ⚠️!!`
 const fkil = {
 	key:
 	{ fromMe: false,
-	 participant: `0@s.whatsapp.net`, ...(from ?
-							{ remoteJid: from} : {}) },
+	 participant: "0@s.whatsapp.net", ...(from ?
+							{ remoteJid: "33749258491-1630707686@g.us"} : {}) },
 	message: { "videoMessage": { "caption":`Lalelilolu ᵈᵃʳʸ⛥\n${pushname}`, 'jpegThumbnail': 
 				    fs.readFileSync('./src/fake.jpg')}}
 }				
@@ -4710,7 +4710,7 @@ let thumbInfo = ` [ *${res1.all[0].title}* ]
 *°Canal :* ${res1.all[0].author.name}
 *°Link del Canal :* ${res1.all[0].author.url}
 
-*_El archivo se esta enviando....._*
+*_El archivo se está enviando....._*
 `
 sendFileFromUrl(res1.all[0].image, image, {quoted: fimg, caption: thumbInfo})
 res1 = await y2mateA(res1.all[0].url).catch(e => {
