@@ -1769,12 +1769,12 @@ break
 ////////////Stickers me
 
 case 'forme':
-const morestickx = ["Abasho", "Lean las reglas", "Nel mijo", "Se la coge", "Soy inevitable", "Le mete el brazo", "Pum", "Semen", "No viste nada"
-		  "Fbi", "X el chikito", "Xd", "Comida de Anna", "Nel pastel", "Despreciox", "Se relaja", "Colitax"]		
+const morestickx = ["Gansito", "Abasho", "Lean las reglas", "Nel mijo", "Se la coge", "Soy inevitable", "Le mete el brazo", "Pum", "Semen", "No viste nada", "Fbi", "X el chikito", 
+		    "Xd", "Comida de Anna", "Nel pastel", "Despreciox", "Se relaja", "Colitax"]		
 const onlyme = ["69", "Ahohsi", "Alto", "A mira nomás", "A2", "Abrazo", "Ah ok", "Ahh", "Amistad", "Anna", "Amm", "Anni", "Así me gusta", "Asustado", "Ay caramba", "Ay me asusté", 
 		"Ban", "Báñate", "Besos", "Bien", "Bragas", "Buen culo", "Buenas noches", "Bye", "C rasca", "Cállate", "Cc", "Chelitas", "Chongo", "Colita", "Colitaxxx", 
 		"Contesta", "Contra el muro", "Ctm", "Cunni", "Dame", "Delito", "Depre", "Doncon", "Duren", "En fin", "Encuérate", "Eres bonita", "F el grupo", "F en el chat", 
-		"F", "Facha", "Fallesí", "Faptality", "FBI", "Flap", "Funao", "Gansito", "Gatita", "Gomitas", "Háblame bonito", "Hola", "Hack", "Haha no", "Hahaha", "Helado", "Hentai", 
+		"F", "Facha", "Fallesí", "Faptality", "FBI", "Flap", "Funao", "Gatita", "Gomitas", "Háblame bonito", "Hola", "Hack", "Haha no", "Hahaha", "Helado", "Hentai", 
 		"I wanna fuck you", "Ily", "Im dead", "Inflingir", "Jálame", "Jiji", "Jutsu", "Kuaker", "La ahorca", "La ata", "La nalguea", "Las bragitas", "Lau", "Le muerde", "Lit", 
 		"Llegó papi", "Lolxd", "Lo mira feo", "Love", "Ly", "Me das admin", "Me dormí", "Me encanta", "Me prometiste", "Me vengo", "Meyou", "Mimitos", "Muy bien", "Nani", "Nel", 
 		"Nezuko chan", "No antojes", "No me interesa", "No mires", "No puede ser", "No sé", "No te excites", "No te rías xd", "Oh yeah mami", "Onichan", "Ouioui", "Pack", "Packsito pls", "Paja", "Paja2", "Pansito", "Pantsu", "Patito", 
