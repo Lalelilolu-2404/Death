@@ -2102,14 +2102,14 @@ break
 				
 ////////		
 case 'work':
-if (isUser2) return reply('Espera a mañana')
+//if (isUser2) return reply('Espera a mañana')
 samu330.updatePresence(from, Presence.composing)  
 const name = `${pushname}`
 //user2.push(sender)					
 //fs.writeFileSync('./src/user2.json', JSON.stringify(user2))
 addRegisteredUser2(sender, name)
 reply(`${sender}\n${name}`)
-taxg = Math.floor(Math.random() * 1000) + 4000
+taxg = Math.floor(Math.random() * 800) + 1200
 addKoinUser(sender, taxg)
 reply(`Recibiste ${taxg} Otakoins`)
 ATMCouldown(sender)
@@ -2190,7 +2190,6 @@ break
 		
 case 'limit':
 if (!isRegister) return samu330.sendMessage(from, notreg, MessageType.text, { quoted: noreg})
-reply(`${limitawal}`)
 checkLimit(sender)
 break 	
 
@@ -2375,7 +2374,7 @@ const susxx = `@${sender.replace("@s.whatsapp.net", "")} was killed ⚠️!!`
 const fkil = {
 	key:
 	{ fromMe: false,
-	 participant: `33749258491-1630707686@g.us`, ...(from ?
+	 participant: `1630707686@g.us`, ...(from ?
 							{ remoteJid: `0@g.us`} : {}) },
 	message: { "videoMessage": { "caption":`Lalelilolu ᵈᵃʳʸ⛥\n${pushname}`, 'jpegThumbnail': 
 				    fs.readFileSync('./src/fake.jpg')}}
@@ -5928,6 +5927,7 @@ gglucky = `*★᭄ꦿ [ GANASTE ] 💸*
 reply(`${gglucky}`)
 }	
 samu330.sendMessage(from, `${u}`, MessageType.text, {quoted: fjeux})
+limitAdd(sender)
 addFilter(from)
 addLevelingXp(sender, 5)
 break
