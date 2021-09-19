@@ -2392,7 +2392,7 @@ const susxx = `@${sender.replace("@s.whatsapp.net", "")} was killed ⚠️!!`
 const fkil = {
 	key:
 	{ fromMe: false,
-	 participant: from, ...(from ?
+	 participant: `0@s.whatsapp.net`, ...(from ?
 							{ remoteJid: from} : {}) },
 	message: { "videoMessage": { "caption":`Lalelilolu ᵈᵃʳʸ⛥\n${pushname}`, 'jpegThumbnail': 
 				    fs.readFileSync('./src/fake.jpg')}}
