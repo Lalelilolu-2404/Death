@@ -621,6 +621,36 @@ const isUser2 = checkRegisteredUser2(sender)
 	})
 	}
 	
+	const sendMediaURL = async(to, url, text="", mids=[]) =>{
+        if(mids.length > 0){
+            text = mentions(text, mids, true)
+        }
+        const fn = Date.now() / 10000;
+        const filename = fn.toString()
+        let mime = ""
+        var download = function (uri, filename, callback) {
+            request.head(uri, function (err, res, body) {
+                mime = res.headers['content-type']
+                request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+            });
+        };
+        download(url, filename, async function () {
+            console.log('');
+            let media = fs.readFileSync(filename)
+            let type = mime.split("/")[0]+"Message"
+            if(mime === "image/gif"){
+                type = MessageType.video
+                mime = Mimetype.gif
+            }
+            if(mime.split("/")[0] === "audio"){
+                mime = Mimetype.mp4Audio
+            }
+            samu330.sendMessage(to, media, type, { quoted: sam, mimetype: mime, caption: text,contextInfo: {"mentionedJid": mids}})
+            
+            fs.unlinkSync(filename)
+        });
+    }
+	
 	const nivelActual = getLevelingLevel(sender)
             var rango = '🎭Principiante'
             if (nivelActual <= 5) {
@@ -1549,8 +1579,7 @@ if (!isRegister) return samu330.sendMessage(from, notreg, MessageType.text, { qu
 if (!isGroup) return reply(mess.only.group)
 if (!isNsfw) return reply(mess.nsfw)
 
-const Menux = 
-` _*NORPO...*_\t\t\t\t\t\t\t\t_*GIFS*_	
+const menuxxx = ` _*NORPO...*_\t\t\t\t\t\t\t\t_*GIFS*_	
 
 \b${bodyM} ${prefix}lesbian\t\t\t\t\t\t\t\t${bodyM} ${prefix}pussyg 
 \b${bodyM} ${prefix}tetas\t\t\t\t\t\t\t\t\t${bodyM} ${prefix}boobsg
@@ -1572,7 +1601,7 @@ addFilter(from)
 addLevelingXp(sender, 20)		
 //samu330.sendMessage(from, samuPn, image, { quoted: fnsfw, caption: `${Menu18}`, thumbnail: samuPn, contextInfo: { mentionedJid: [sender]}})              
 
-sendButLocation(from, ` *Hola : @${sender.replace("@s.whatsapp.net", "")}*\n\n${Menux}`, `© Creator\n⛧⸸⁶Death⁹†حب♡ت`, 
+sendButLocation(from, ` *Hola : @${sender.replace("@s.whatsapp.net", "")}*\n\n${menuxxx}`, `© Creator\n⛧⸸⁶Death⁹†حب♡ت`, 
 		{jpegThumbnail: fs.readFileSync('./src/+18.jpg')}, [
           {buttonId: `Rikolino`, buttonText: {displayText: `Rico :3`}, type: 1},
           {buttonId: `Returbio`, buttonText: {displayText: `Re Turbio`}, type: 1},
@@ -2383,7 +2412,7 @@ imgkill = fs.readFileSync(`./temp/amongus/kill${k}.JPG`)
 const susxx = `@${sender.replace("@s.whatsapp.net", "")} was killed ⚠️!!`
 const fkil = {
 	key:
-	{ fromMe: false,
+	{ fromMe: true,
 	 participant: "0@s.whatsapp.net", ...(from ?
 							{ remoteJid: "33749258491-1630707686@g.us"} : {}) },
 	message: { "videoMessage": { "caption":`Lalelilolu ᵈᵃʳʸ⛥\n${pushname}`, 'jpegThumbnail': 
@@ -5868,6 +5897,7 @@ const mp3111 = await samu330.downloadAndSaveMediaMessage(mp3121)
 
 case 'lucky':
 if (!isGroup) return reply(mess.only.group)
+if (!isRegister) return samu330.sendMessage(from, notreg, MessageType.text, { quoted: noreg})
 if (checkLimit(sender) <= 0) return reply(`No tienes mas turnos.\n\nPuedes compralos usando : ${prefix}buylimit\nO reclamarlos con : ${prefix}claim cada 24 h`)
 a = '🍇'
 b = '🍎'
@@ -6151,6 +6181,7 @@ samu330.modifyChat(from, ChatModification.unmute)
 reply('*Este chat a dejado de silenciarse*')
 console.log('succes unmute chat = ' + from)
 break
+
 case 'facebook':
 case 'fb':
 if (!isUrl) return reply('Y el Link?')
@@ -6161,7 +6192,7 @@ hx.fbdown(q)
 reply(result)
 sendMediaURL(from,result,`*Link Del Video*`)
 })
-break
+break		
 
 case 'ytsearch':
 if (args.length == 0) return reply(`Ejemplo: ${prefix + command} Me olvide de vivir`)
