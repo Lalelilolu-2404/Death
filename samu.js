@@ -2108,7 +2108,7 @@ taxg = Math.floor(Math.random() * 800) + 1200
 addKoinUser(sender, taxg)
 reply(`Recibiste ${taxg} Otakoins`)
 ATMCouldown(sender)
-addLevelingXp(sender, 10)
+addLevelingXp(sender, 20)
 break		
 				
 case 'givemoney':
@@ -2208,6 +2208,7 @@ break
 case 'buylimit':
 if (!isGroup) return reply(mess.only.group)
 if (!isRegister) return samu330.sendMessage(from, notreg, MessageType.text, { quoted: noreg})
+samu330.updatePresence(from, Presence.composing) 
 arg1 = q
 if (!arg1) return reply(`*Ej. ${prefix}buylimit 3*\n\nCompras turnos para Lucky\n2000 Otakoins por turno`)
 argz = arg1.split("|")
@@ -4431,11 +4432,11 @@ dadu = dadus[Math.floor(Math.random() * dadus.length)]
 //samu330.sendMessage(from, dador, sticker, {quoted: fjeux, sendEphemeral: true})
 rndd = `d${argz[0]}`
 if (dadu == rndd) {
-	addLevelingXp(sender, 200)
-	addKoinUser(sender, 200)
+	addLevelingXp(sender, 300)
+	addKoinUser(sender, 300)
 	dador = fs.readFileSync(`./temp/dados/${dadu}.webp`)
 	samu330.sendMessage(from, dador, sticker, {quoted: fjeux, sendEphemeral: true})
-	reply('Ganaste 200xp perro!!')
+	reply('Ganaste 300xp perro!!')
 } else {reply(`F bro, perdiste :v\n*Salió ${dadu}*`)}
 addFilter(from)
 addLevelingXp(sender, 5)
@@ -5931,10 +5932,10 @@ ${a}
 //reply(`${u}`)
 if (luck3 != f){
 if (luck3 == luck4 && luck3 == luck5 && luck4 == luck5) {
-addLevelingXp(sender, 666)
+addLevelingXp(sender, 2000)
 glucky = `*★᭄ꦿ [ GANASTE ] 💸*\n
 ⛥ ${pushname}
-᭕- Recibes ༊ 666 Xp ༊`
+᭕- Recibes ༊ 2000 Xp ༊`
 reply(`${glucky}`)
 }
 }
@@ -5948,7 +5949,7 @@ reply(`${gglucky}`)
 samu330.sendMessage(from, `${u}`, MessageType.text, {quoted: fjeux})
 await limitAdd(sender)
 addFilter(from)
-addLevelingXp(sender, 5)
+addLevelingXp(sender, 20)
 break
 /**
 case 'purga': 
