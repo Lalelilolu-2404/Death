@@ -5876,6 +5876,7 @@ const mp3111 = await samu330.downloadAndSaveMediaMessage(mp3121)
 
 case 'lucky':
 if (!isGroup) return reply(mess.only.group)
+if (checkLimit(sender) <= 0) return reply(`No tienes mas turnos.\n\nPuedes compralos usando : ${prefix}buylimit\nO reclamarlos con : ${prefix}claim cada 24 h`)
 a = '🍇'
 b = '🍎'
 c = '🍓'
@@ -5945,7 +5946,7 @@ gglucky = `*★᭄ꦿ [ GANASTE ] 💸*
 reply(`${gglucky}`)
 }	
 samu330.sendMessage(from, `${u}`, MessageType.text, {quoted: fjeux})
-limitAdd(sender)
+await limitAdd(sender)
 addFilter(from)
 addLevelingXp(sender, 5)
 break
