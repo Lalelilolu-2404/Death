@@ -2192,7 +2192,7 @@ samu330.sendMessage(from, hailx, MessageType.text, {quoted: sam})
 addLevelingXp(sender, 20)
 break	
 	
-case 'claimlimit':
+case 'claim':
 if (!isGroup) return reply(mess.only.group)
 if (!isRegister) return samu330.sendMessage(from, notreg, MessageType.text, { quoted: noreg})
 if (isUser2) return reply('Espera a mañana para volver a reclamar')
@@ -2209,19 +2209,18 @@ case 'buylimit':
 if (!isGroup) return reply(mess.only.group)
 if (!isRegister) return samu330.sendMessage(from, notreg, MessageType.text, { quoted: noreg})
 arg1 = q
-if (!arg1) return reply(`Ejemplo ${prefix}buylimit #\n Compras turnos para Lucky\n2000 Otakoins por turno`)
+if (!arg1) return reply(`*Ej. ${prefix}buylimit 3*\n\nCompras turnos para Lucky\n2000 Otakoins por turno`)
 argz = arg1.split("|")
 if (isNaN(argz[0])) return reply(`Elije el # de turnos a comprar`)
 turnos = argz[0] * 1
 if (turnos < 0) return reply(`No seas pendejo, pajín!`)	
 payout = turnos * 2000
 if ( checkATMuser(sender) < payout) return reply(`Lo siento, tu dinero no es suficiente.`)
-if ( checkATMuser(sender) >= total ) {
+if ( checkATMuser(sender) >= payout ) {
 	confirmATM(sender, payout)
 	buyLimit(sender, payout)
 	addKoinUser('33749258491@s.whatsapp.net', payout)
-await reply(`*「 PAGO EXITOSO 」*\n\n*Receptor* : ${pushname}\n
-*Compra* : ${turnos} turnos\n*Precio total* : ${payout} Otakoins\n*\n\nEl proceso es exitoso con el número de pago:\n${createSerial(15)}\n*Para verificar, usa ${prefix}limit*`)
+await reply(`*「 PAGO EXITOSO 」*\n\n*Receptor* : ${pushname}\n*Compra* : ${turnos} turnos\n*Precio total* : ${payout} Otakoins\n\nEl proceso es exitoso con el número de pago:\n${createSerial(15)}\n*Para verificar, usa ${prefix}limit*`)
 } 
 break	
 
