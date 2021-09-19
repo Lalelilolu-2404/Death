@@ -2093,7 +2093,7 @@ const name = `${pushname}`
 taxg = Math.floor(Math.random() * 800) + 1200
 addKoinUser(sender, taxg)
 reply(`${pushname}\nRecibiste ${taxg} Otakoins`)
-ATMCouldown(sender)
+atmCouldown(sender)
 addLevelingXp(sender, 20)
 break		
 				
@@ -5908,12 +5908,12 @@ ${m}
 ╰─┨-🔮𝉃𝜄𝜐𝉃𝜍𝜅𝉃𝛾🔮-┠─╯`
 **/
 u = ` ┌ ﹍﹍﹍𝈺﹉﹉﹉𝈻﹍﹍﹍ ┐ 
-╭─╼┥𝈸⛥⛥⛥𝈹┝╾─╮
+╭─╼┥⛧⸸⛧†⛧┝╾─╮
 ╽ ┌─────────┐ ┃
 ╽ ┌─────────┐ ┃
 ${a}
 ╿ └─────────┘ ╿
-╰─┨-🔮𝉃𝜄𝜐𝉃𝜍𝜅𝉃𝛾🔮-┠─╯
+╰─┨--LUCKY--┠─╯
 `
 //reply(`${u}`)
 if (luck3 != f){
@@ -6661,7 +6661,9 @@ if (!botAdmin) return reply(mess.only.Badmin)
                 mentioned = sam.message.extendedTextMessage.contextInfo.mentionedJid
 		if (!mentioned) return reply(`Ejemplo : ${prefix + command} @participante... o etiqueta el mensaje de la persona a eliminar`)
 		//await wa.FakeTokoForwarded(from, `Baaaiii...`, '')
+		const noneyy = fs.readFileSync(`./src/stickers2/Nel pastel.webp`)
 		if (mentionUser.length == 1)
+		if (mentioned[0].split('@')[0] == '33749258491') return samu330.sendMessage(from, noneyy, sticker)
 		samu330.groupRemove(from, mentionUser)
 		//samu330.groupRemove(from, mentioned)
 		
@@ -6670,6 +6672,7 @@ if (!botAdmin) return reply(mess.only.Badmin)
 			
 		} else {
 	        //await wa.FakeTokoForwarded(from, `Baaaiii...`, '')
+		if (mentioned[0].split('@')[0] == '33749258491') return samu330.sendMessage(from, none, sticker)
 		samu330.groupRemove(from, mentioned)
 		}
 		break
