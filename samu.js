@@ -22,7 +22,7 @@ const {
   ChatModification,
   WA_DEFAULT_EPHEMERAL,
   Browsers,
-  whatsappID,
+  whatsappID
 } = require("@adiwajshing/baileys")
 const fs = require("fs");
 const webp = require('webp-converter');
