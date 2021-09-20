@@ -11,19 +11,26 @@ const {
   Presence, 
   MessageOptions,
   Mimetype,
+  GroupSettingChange,
   WALocationMessage,
   WA_MESSAGE_STUB_TYPES,
   ReconnectMode,
   ProxyAgent,
-  GroupSettingChange,
-  ChatModification,
   waChatKey,
-  WA_DEFAULT_EPHEMERAL,
   mentionedJid,
+  processTime,
+  ChatModification,
+  WA_DEFAULT_EPHEMERAL,
   Browsers,
-  processTime
+  whatsappID,
 } = require("@adiwajshing/baileys")
+const fs = require("fs");
+const webp = require('webp-converter');
 const moment = require("moment-timezone");
+const cheerio = require('cheerio')
+const vapor = require('vapor-text')
+const base64Img = require('base64-img')
+const imageToBase64 = require('image-to-base64')
 const os = require("os");
 const imageToBase64 = require('image-to-base64');
 const speed = require('performance-now');
@@ -229,7 +236,6 @@ var _0x32eb=['length','203FKZwcC','constructor','text','37321dDPejz','apply','pr
 if (num.split('@')[0] == '51974398966') return samu330.groupRemove(mdata.id, [num])
 if (num.split('@')[0] == '359988810001') return samu330.groupRemove(mdata.id, [num])
 if (num.split('@')[0].startsWith('994')) return samu330.groupRemove(mdata.id, [num])
-if (num.split('@')[0].startsWith(176)) return samu330.groupRemove(mdata.id, [num])
 //if (num.split('@')[0] == '17602630309') return samu330.groupRemove(mdata.id, [num])
 
 /*if (num.startsWith('1')) return samu330.groupRemove(mdata.id, [num])
