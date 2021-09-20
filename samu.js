@@ -2409,8 +2409,9 @@ case 'kill':
 samu330.updatePresence(from, Presence.composing) 
 var k = Math.floor(Math.random() * 17) + 1
 imgkill = fs.readFileSync(`./temp/amongus/kill${k}.JPG`)
-//samu330.sendMessage(from, {jpegThumbnail: imgkill}, MessageType.liveLocation,{ quoted: fjeux})
-const susxx = `@${sender.replace("@s.whatsapp.net", "")} was killed ⚠️!!`
+samu330.sendMessage(from, {jpegThumbnail: imgkill}, MessageType.liveLocation,{ quoted: fjeux})
+//const susxx = `@${sender.replace("@s.whatsapp.net", "")} was killed ⚠️!!`
+/**
 const fkil = {
 	key:
 	{ fromMe: true,
@@ -2420,6 +2421,7 @@ const fkil = {
 				    fs.readFileSync('./src/fake.jpg')}}
 }				
 samu330.sendMessage(from, susxx, MessageType.text, { quoted: fkil, contextInfo: { mentionedJid: [sender]}})
+**/
 break
 		
 /**
