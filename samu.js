@@ -852,17 +852,7 @@ const isUser2 = checkRegisteredUser2(sender)
               ),{ waitForAck: true }) 
           }
 
-          const sendButMessage = (id, text1, desc1, but = [], options = {}) => {
-            const buttonMessage = {
-            contentText: text1,
-            footerText: desc1,
-            buttons: but,
-            headerType: 1
-            }
-            samu330.sendMessage(id, buttonMessage, MessageType.buttonsMessage, options)
-            }
-
-        const sendButLocation = async (id, text1, desc1, gam1, but = [], options = {}) => {
+	const sendButLocation = async (id, text1, desc1, gam1, but = [], options = {}) => {
                 kma = gam1
                 mhan = await samu330.prepareMessage(from, kma, location)
                 const buttonMessages = {
@@ -874,19 +864,31 @@ const isUser2 = checkRegisteredUser2(sender)
                 }
                 samu330.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
                 }
-/**
-        const sendButLocation = async (id, text1, desc1, but = [], options = {}) => {
-                logor = fs.readFileSync(`.src/nsfw.jpg`)
-                const buttonMessages = {
-                locationMessage: {jpegThumbnail:logor},
-                contentText: text1,
-                footerText: desc1,
-                buttons: but,
-                headerType: 6
-                }
-                samu330.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
-                }
-**/	  
+
+
+	const sendButMessage = (id, text1, desc1, but = [], options = {}) => {
+		const buttonMessage = {
+		contentText: text1,
+		footerText: desc1,
+		buttons: but,
+		headerType: 1
+		}
+		samu330.sendMessage(id, buttonMessage, MessageType.buttonsMessage, options)
+		}
+	
+	const sendButImage = async(id, text1, desc1, gam1, but = [], options = {}) => {
+		kma = gam1
+		mhan = await samu330.prepareMessage(from, kma, image)
+		const buttonMessages = {
+		imageMessage: mhan.message.imageMessage,
+		contentText: text1,
+		footerText: desc1,
+		buttons: but,
+		headerType: 4
+		}
+		samu330.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
+		}
+
 	const noreg = {
 		key: {                
 		fromMe: false,
@@ -913,31 +915,7 @@ const isUser2 = checkRegisteredUser2(sender)
     		'END:VCARD'
 		}
 		}
-		}
-const SendButKev = async (
-      id,
-      text1,
-      desc1,
-      kev,
-      but = [],
-      options = {}
-    ) => {
-      kevin = kev;
-      nivek = await samu330.prepareMessage(from, kevin, image);
-      const buttonMessages = {
-        imageMessage: nivek.message.imageMessage,
-        contentText: text1,
-        footerText: desc1,
-        buttons: but,
-        headerType: 4,
-      };
-      samu330.sendMessage(
-        id,
-        buttonMessages,
-        MessageType.buttonsMessage,
-        options
-      );
-    };
+		}	
 
 const fimg = {
 key:
@@ -1128,121 +1106,6 @@ function _0xd037(_0x1fea26,_0x25290c){const _0x49fad6=_0x33d3();return _0xd037=f
 			samu330.groupSettingChange(from, GroupSettingChange.messageSend, true)
 			txt = `*Epaa.... Crash Bot Detectado!!!*
 		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-			
-			
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
 		   \`\`\`BUG DETECTADO!!\`\`\`
 		   *MARCA COMO LEIDO ESTE CHAT, PARA QUE EL CRASH NO TE AFECTE.*`
 			// _@⁨${bugquien.split('@')[0]} que te pasa eh!! :/_
@@ -1328,7 +1191,6 @@ function _0xd037(_0x1fea26,_0x25290c){const _0x49fad6=_0x33d3();return _0xd037=f
 			//reply(`Link detectado ${sender.split("@")[0]} serás expulsado de este grupo`)
 			samu330.groupRemove(from, [sender])
 		}
-
 	    
 	    ///////////////////////FUNCIONES CREADAS POR SAMU330\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 	    
@@ -1452,8 +1314,8 @@ function _0xd037(_0x1fea26,_0x25290c){const _0x49fad6=_0x33d3();return _0xd037=f
 	    		if (sam.message.listResponseMessage){
 				if (!isGroup) return reply(mess.only.group)
 				for(let i = 1; i <= repic.length; i++){
-				test1 = sam.message.listResponseMessage.singleSelectReply.selectedRowId
-				if (test1.includes(`Id${i}`)){
+				test = sam.message.listResponseMessage.singleSelectReply.selectedRowId
+				if (test.includes(`Id${i}`)){
 					//reply(`Id${i}`)
 					j = i - 1
 					docp = repic[j]
@@ -1466,8 +1328,8 @@ function _0xd037(_0x1fea26,_0x25290c){const _0x49fad6=_0x33d3();return _0xd037=f
 
 	    		if (sam.message.listResponseMessage){
 				if (!isGroup) return reply(mess.only.group)
-				test1 = sam.message.listResponseMessage.singleSelectReply.selectedRowId
-				if (test1.includes(`Id9`)){
+				test = sam.message.listResponseMessage.singleSelectReply.selectedRowId
+				if (test.includes(`Id9`)){
 					reply(mess.wait)
 					waifusd = await axios.get('https://waifu.pics/api/sfw/waifu')
 					nysd = await getBuffer(waifusd.data.url)
@@ -1478,8 +1340,8 @@ function _0xd037(_0x1fea26,_0x25290c){const _0x49fad6=_0x33d3();return _0xd037=f
 	    
 	   		if (sam.message.listResponseMessage){
 				if (!isGroup) return reply(mess.only.group)
-				test1 = sam.message.listResponseMessage.singleSelectReply.selectedRowId
-				if (test1.includes(`Id10`)){
+				test = sam.message.listResponseMessage.singleSelectReply.selectedRowId
+				if (test.includes(`Id10`)){
 					reply(mess.wait)
 					kawai1 = await axios.get(`http://api.lolhuman.xyz/api/random/neko?apikey=NikolaTesla`)
 					kawai2 = await axios.get(`http://api.lolhuman.xyz/api/random2/neko?apikey=NikolaTesla`)
@@ -1494,8 +1356,8 @@ function _0xd037(_0x1fea26,_0x25290c){const _0x49fad6=_0x33d3();return _0xd037=f
                       
 	   		if (sam.message.listResponseMessage){
 				if (!isGroup) return reply(mess.only.group)
-				test1 = sam.message.listResponseMessage.singleSelectReply.selectedRowId
-				if (test1.includes(`IdBaka`)){
+				test = sam.message.listResponseMessage.singleSelectReply.selectedRowId
+				if (test.includes(`IdBaka`)){
 					reply(mess.wait)
 					ranp = getRandom('.gif')
                     			rano = getRandom('.webp')
@@ -1575,6 +1437,7 @@ switch (command) {
 
 case 'menu18':
 samu330.updatePresence(from, Presence.composing)
+uptime = process.uptime()
 if (!isRegister) return samu330.sendMessage(from, notreg, MessageType.text, { quoted: noreg})
 if (!isGroup) return reply(mess.only.group)
 if (!isNsfw) return reply(mess.nsfw)
@@ -1600,15 +1463,8 @@ const menuxxx = `&_*NORPO...*_\t\t\t\t\t\t\t_*GIFS*_
 addFilter(from)
 addLevelingXp(sender, 20)		
 //samu330.sendMessage(from, samuPn, image, { quoted: fnsfw, caption: `${Menu18}`, thumbnail: samuPn, contextInfo: { mentionedJid: [sender]}})              
-
-sendButLocation(from, ` *Hola : @${sender.replace("@s.whatsapp.net", "")}*\n\n${menuxxx}`, `© Creator\n⛧⸸⁶Death⁹†حب♡ت`, 
-		{jpegThumbnail: fs.readFileSync('./src/+18.jpg')}, [
-	{buttonId: 'test11', buttonText: {displayText: `Rico :3`}, type: 1}, 
-	{buttonId: 'test22', buttonText: {displayText: `Re Turbio`}, type: 1},  
-], { contextInfo: { mentionedJid: [sender]}});	
-		
-break	
-		
+sendButLocation(from, ` *Hola : @${sender.replace("@s.whatsapp.net", "")}*\n\n${menuxxx}`, `© Creator\n⛧⸸⁶Death⁹†حب♡ت`, {jpegThumbnail: fs.readFileSync('./src/+18.jpg')}, [{buttonId: 'test11', buttonText: {displayText: `Rico :3`}, type: 1}, {buttonId: 'test22', buttonText: {displayText: `Re Turbio`}, type: 1}], { contextInfo: { mentionedJid: [sender]}})		
+break			
 /////////			
 		
 case 'menulog':
@@ -2391,7 +2247,7 @@ buttonsMessage = {
 break		
 		
 case 'sino':
-SendButKev(from, 'kevin ok', `© Creator\n${pushname}`, fs.readFileSync('./src/nsfw.jpg'), [
+sendButImage(from, 'kevin ok', `© Creator\n${pushname}`, fs.readFileSync('./src/nsfw.jpg'), [
           {buttonId: `${prefix}Uff si`, buttonText: {displayText: `Uff si`}, type: 1},
           {buttonId: `${prefix}Nelpanel`, buttonText: {displayText: `Nel :v`}, type: 1},
 ]);
