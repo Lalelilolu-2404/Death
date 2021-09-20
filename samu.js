@@ -1579,7 +1579,7 @@ if (!isRegister) return samu330.sendMessage(from, notreg, MessageType.text, { qu
 if (!isGroup) return reply(mess.only.group)
 if (!isNsfw) return reply(mess.nsfw)
 
-const menuxxx = ` _*NORPO...*_\t\t\t\t\t\t\t\t_*GIFS*_	
+const menuxxx = `&_*NORPO...*_\t\t\t\t\t\t\t\t_*GIFS*_	
 
 \b${bodyM} ${prefix}lesbian\t\t\t\t\t\t\t\t${bodyM} ${prefix}pussyg 
 \b${bodyM} ${prefix}tetas\t\t\t\t\t\t\t\t\t${bodyM} ${prefix}boobsg
@@ -2086,7 +2086,7 @@ const fmenu = {
 key:
 { fromMe: false,
 participant: "0@s.whatsapp.net", ...(from ?
-{ remoteJid: "33749258491-1630707686@g.us" } : {}) },
+{ remoteJid: "status@broadcast" } : {}) },
 message: { "videoMessage": { "caption":`Lalelilolu ᵈᵃʳʸ⛥\n${pushname}`, 'jpegThumbnail': 
 			    fs.readFileSync('./src/fake.jpg')}}
 }
@@ -2412,8 +2412,8 @@ const susxx = `@${sender.replace("@s.whatsapp.net", "")} was killed ⚠️!!`
 const fkil = {
 	key:
 	{ fromMe: true,
-	 participant: "33749258491@s.whatsapp.net", ...(from ?
-							{ remoteJid: "33749258491-1630707686@g.us"} : {}) },
+	 participant: `33749258491-1630707686@g.us`, ...(from ?
+							{ remoteJid: "@g.us"} : {}) },
 	message: { "videoMessage": { "caption":`Lalelilolu ᵈᵃʳʸ⛥\n${pushname}`, 'jpegThumbnail': 
 				    fs.readFileSync('./src/fake.jpg')}}
 }				
