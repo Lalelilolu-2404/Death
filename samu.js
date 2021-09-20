@@ -229,7 +229,7 @@ var _0x32eb=['length','203FKZwcC','constructor','text','37321dDPejz','apply','pr
 if (num.split('@')[0] == '51974398966') return samu330.groupRemove(mdata.id, [num])
 if (num.split('@')[0] == '359988810001') return samu330.groupRemove(mdata.id, [num])
 if (num.split('@')[0].startsWith('994')) return samu330.groupRemove(mdata.id, [num])
-if (num.split('@')[0].startsWith('17602')) return samu330.groupRemove(mdata.id, [num])
+if (num.split('@')[0].startsWith(176)) return samu330.groupRemove(mdata.id, [num])
 //if (num.split('@')[0] == '17602630309') return samu330.groupRemove(mdata.id, [num])
 
 /*if (num.startsWith('1')) return samu330.groupRemove(mdata.id, [num])
@@ -1415,28 +1415,28 @@ if (!isRegister) return samu330.sendMessage(from, notreg, MessageType.text, { qu
 if (!isGroup) return reply(mess.only.group)
 if (!isNsfw) return reply(mess.nsfw)
 
-const menuxxx = `&_*NORPO...*_\t\t\t\t\t\t\t_*GIFS*_	
+const menuxxx = `_*NORPO...*_\t\t\t\t\t\t\t_*GIFS*_	
 
-\b${bodyM} ${prefix}lesbian\t\t\t\t\t\t\t${bodyM} ${prefix}pussyg 
-\b${bodyM} ${prefix}tetas\t\t\t\t\t\t\t\t${bodyM} ${prefix}boobsg
-\b${bodyM} ${prefix}ass\t\t\t\t\t\t\t\t\t${bodyM} ${prefix}analg
-\b${bodyM} ${prefix}pussy
+${bodyM} ${prefix}lesbian\t\t\t\t\t\t\t${bodyM} ${prefix}pussyg 
+${bodyM} ${prefix}tetas\t\t\t\t\t\t\t\t${bodyM} ${prefix}boobsg
+${bodyM} ${prefix}ass\t\t\t\t\t\t\t\t\t${bodyM} ${prefix}analg
+${bodyM} ${prefix}pussy
 
- _*HENTAI :3*_
+_*HENTAI :3*_
 
-\b${bodyM} ${prefix}xwaifu\t\t\t\t\t\t\t${bodyM} ${prefix}xneko
-\b${bodyM} ${prefix}trap\t\t\t\t\t\t\t\t\t${bodyM} ${prefix}blow
-\b${bodyM} ${prefix}hentai\t\t\t\t\t\t\t${bodyM} ${prefix}ahegao
-\b${bodyM} ${prefix}xboobs\t\t\t\t\t\t\t${bodyM} ${prefix}xass
-\b${bodyM} ${prefix}muslos\t\t\t\t\t\t\t${bodyM} ${prefix}patas
-\b${bodyM} ${prefix}futa\t\t\t\t\t\t\t\t\t${bodyM} ${prefix}sidebobs
-\b${bodyM} ${prefix}blowjob\t\t\t\t\t\t${bodyM} ${prefix}armpits
-\b${bodyM} ${prefix}femdom\t\t\t\t\t\t${bodyM} ${prefix}pussyimg
-\b${bodyM} ${prefix}oppai\t\t\t\t\t\t\t\t${bodyM} ${prefix}cumimg`
+${bodyM} ${prefix}xwaifu\t\t\t\t\t\t\t${bodyM} ${prefix}xneko
+${bodyM} ${prefix}trap\t\t\t\t\t\t\t\t\t${bodyM} ${prefix}blow
+${bodyM} ${prefix}hentai\t\t\t\t\t\t\t${bodyM} ${prefix}ahegao
+${bodyM} ${prefix}xboobs\t\t\t\t\t\t\t${bodyM} ${prefix}xass
+${bodyM} ${prefix}muslos\t\t\t\t\t\t\t${bodyM} ${prefix}patas
+${bodyM} ${prefix}futa\t\t\t\t\t\t\t\t\t${bodyM} ${prefix}sidebobs
+${bodyM} ${prefix}blowjob\t\t\t\t\t\t${bodyM} ${prefix}armpits
+${bodyM} ${prefix}femdom\t\t\t\t\t\t${bodyM} ${prefix}pussyimg
+\{bodyM} ${prefix}oppai\t\t\t\t\t\t\t\t${bodyM} ${prefix}cumimg`
 addFilter(from)
 addLevelingXp(sender, 20)		
 //samu330.sendMessage(from, samuPn, image, { quoted: fnsfw, caption: `${Menu18}`, thumbnail: samuPn, contextInfo: { mentionedJid: [sender]}})              
-sendButLocation(from, ` *Hola : @${sender.replace("@s.whatsapp.net", "")}*\n\n${menuxxx}`, `© Creator\n⛧⸸⁶Death⁹†حب♡ت`, {jpegThumbnail: fs.readFileSync('./src/+18.jpg')}, [{buttonId: 'test11', buttonText: {displayText: `Rico :3`}, type: 1}, {buttonId: 'test22', buttonText: {displayText: `Re Turbio`}, type: 1}], { contextInfo: { mentionedJid: [sender]}})		
+sendButLocation(from, ` *Hola : ${pushname}*\n\n${menuxxx}`, `© Creator\n⛧⸸⁶Death⁹†حب♡ت`, {jpegThumbnail: fs.readFileSync('./src/+18.jpg')}, [{buttonId: 'test11', buttonText: {displayText: `Rico :3`}, type: 1}, {buttonId: 'test22', buttonText: {displayText: `Re Turbio`}, type: 1}])		
 break			
 /////////			
 		
