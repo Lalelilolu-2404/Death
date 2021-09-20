@@ -1555,16 +1555,16 @@ if (sam.message.buttonsResponseMessage){
 }
 **/
 if (sam.message.buttonsResponseMessage){
-	test1 = sam.message.buttonsResponseMessage.selectedButtonId
-	if (test1.includes(`${prefix}Uff si`)){
+	test4 = sam.message.buttonsResponseMessage.selectedButtonId
+	if (test4.includes(`${prefix}Uff si`)){
 	const ricoy = fs.readFileSync(`./src/stickers/Si xd.webp`)
 	samu330.sendMessage(from, ricoy, sticker)
 	}
 }
 
 if (sam.message.buttonsResponseMessage){
-	test1 = sam.message.buttonsResponseMessage.selectedButtonId
-	if (test1.includes(`${prefix}Nelpanel`)){
+	test4 = sam.message.buttonsResponseMessage.selectedButtonId
+	if (test4.includes(`${prefix}Nelpanel`)){
 	const turbioy = fs.readFileSync(`./src/stickers/Nel.webp`)
 	samu330.sendMessage(from, turbioy, sticker)
 	}
