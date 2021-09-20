@@ -117,33 +117,6 @@ const X = "❌"
 const O = "⭕️"
 
 ///////////////////////////////////////////////////////////////////////////
-//Función checkLimit \\
-            const isLimit = (sender) =>{ 
-          	if (isOwner) {return false;}
-		      let position = false
-              for (let i of _limit) {
-              if (i.id === sender) {
-              	let limits = i.limit
-              if (limits <= 0) {
-              	  position = true
-                    samu330.sendMessage(from, 'Limite pasado :/', text, {quoted: sam})
-                    return true
-              } else {
-              	_limit
-                  position = true
-                  return false
-               }
-             }
-           }
-           if (position === false) {
-           	const obj = { id: sender, limit: 0 }
-                _limit.push(obj)
-                fs.writeFileSync('./src/limit.json',JSON.stringify(_limit))
-           return false
-     	  }
-     	}
-
-////////////////////////////////////////////////////////
 //========= Funcion de Registro =========\\
 
 const getRegisteredRandomId = () => {
@@ -4618,7 +4591,7 @@ sendFileFromUrl(res1[0].link, audio, {quoted: sam, mimetype: 'audio/mp4', filena
 addFilter(from)
 addLevelingXp(sender, 20)	
 break
-		
+/**		
 case 'play3':
 if (!isRegister) return samu330.sendMessage(from, notreg, MessageType.text, { quoted: noreg})
 if (!q) return reply('*Que audio quieres descargar?...Pajero*')
@@ -4633,7 +4606,7 @@ reply(`_[ ! ] Lo siento`)
 })
 sendFileFromUrl(res15.result.url, audio, {quoted: sam, mimetype: 'audio/mp4', filename: res1[0].output})
 break  
-		
+**/	
 case 'play2':		
 	if (!isRegister) return samu330.sendMessage(from, notreg, MessageType.text, { quoted: noreg})
 	if (!q) return reply('*Que audio quieres descargar?...Pajero*')
