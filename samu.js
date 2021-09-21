@@ -37,7 +37,6 @@ const chalk = require('chalk');
 const crypto = require("crypto-js");
 const CryptoJS = require("crypto-js");
 const request = require('request');
-const fs = require('fs');
 const { wait, h2k, generateMessageID, getGroupAdmins, banner, start, info, success, close } = require('./lib/functions')
 const { addBanned, unBanned, BannedExpired, cekBannedUser } = require('./lib/banned.js')
 const { getLevelingXp, getLevelingId, addLevelingXp, addLevelingLevel, addLevelingId, getLevelingLevel, getUserRank, addCooldown, leveltab } = require('./lib/leveling.js')
