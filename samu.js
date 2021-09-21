@@ -1414,7 +1414,7 @@ uptime = process.uptime()
 if (!isRegister) return samu330.sendMessage(from, notreg, MessageType.text, { quoted: noreg})
 if (!isGroup) return reply(mess.only.group)
 if (!isNsfw) return reply(mess.nsfw)
-
+/**
 const menuxxx = `_*NORPO...*_\t\t\t\t\t\t\t_*GIFS*_	
 
 ${bodyM} ${prefix}lesbian\t\t\t\t\t\t\t${bodyM} ${prefix}pussyg 
@@ -1433,6 +1433,26 @@ ${bodyM} ${prefix}futa\t\t\t\t\t\t\t\t\t${bodyM} ${prefix}sidebobs
 ${bodyM} ${prefix}blowjob\t\t\t\t\t\t${bodyM} ${prefix}armpits
 ${bodyM} ${prefix}femdom\t\t\t\t\t\t${bodyM} ${prefix}pussyimg
 \{bodyM} ${prefix}oppai\t\t\t\t\t\t\t\t${bodyM} ${prefix}cumimg`
+**/
+const menuxxx = `_*NORPO...*_		_*GIFS*_	
+
+${bodyM} ${prefix}lesbian		${bodyM} ${prefix}pussyg 
+${bodyM} ${prefix}tetas			${bodyM} ${prefix}boobsg
+${bodyM} ${prefix}ass			${bodyM} ${prefix}analg
+${bodyM} ${prefix}pussy
+
+_*HENTAI :3*_
+
+${bodyM} ${prefix}xwaifu		${bodyM} ${prefix}xneko
+${bodyM} ${prefix}trap			${bodyM} ${prefix}blow
+${bodyM} ${prefix}hentai		${bodyM} ${prefix}ahegao
+${bodyM} ${prefix}xboobs		${bodyM} ${prefix}xass
+${bodyM} ${prefix}muslos		${bodyM} ${prefix}patas
+${bodyM} ${prefix}futa			${bodyM} ${prefix}sidebobs
+${bodyM} ${prefix}blowjob		${bodyM} ${prefix}armpits
+${bodyM} ${prefix}femdom		${bodyM} ${prefix}pussyimg
+\{bodyM} ${prefix}oppai			${bodyM} ${prefix}cumimg`
+
 addFilter(from)
 addLevelingXp(sender, 20)		
 //samu330.sendMessage(from, samuPn, image, { quoted: fnsfw, caption: `${Menu18}`, thumbnail: samuPn, contextInfo: { mentionedJid: [sender]}})              
@@ -2658,53 +2678,17 @@ let picrd = samu330.prepareMessageFromContent(from, {
 "buttonText": "[Here Onichan :3!]",
 "listType": "SINGLE_SELECT",
 "sections": [
-{
-"rows": [
-{
-"title": "Art (imagen random) !!",
-"rowId": `Id1`
-},
-{
-"title": "Wallnime (wallpaper random) !!",
-"rowId": `Id2`
-},
-{
-"title": "Megumin (imagen random) !!",
-"rowId": `Id3`
-},
-{
-"title": "Neko (imagen random) !!",
-"rowId": `Id4`
-},
-{
-"title": "Loli (random)!!",
-"rowId": `Id5`
-},
-{
-"title": "Waifu (random)!!",
-"rowId": `Id6`
-},
-{
-"title": "Sagiri (random)!!",
-"rowId": `Id7`
-},
-{
-"title": "Shinobu (random)!!",
-"rowId": `Id8`
-},
-{
-"title": "Waifus (random)!!",
-"rowId": `Id9`
-},
-{
-"title": "Kawai (random)!!",
-"rowId": `Id10`
-},
-{
-"title": "Baka (sticker random)!!",
-"rowId": `IdBaka`
-},
-]
+{"rows": [{"title": "Art (imagen random) !!", "rowId": `Id1`},
+	  {"title": "Wallnime (wallpaper random) !!", "rowId": `Id2`},
+	  {"title": "Megumin (imagen random) !!", "rowId": `Id3`},
+	  {"title": "Neko (imagen random) !!", "rowId": `Id4`},
+	  {"title": "Loli (random)!!", "rowId": `Id5`},
+	  {"title": "Waifu (random)!!", "rowId": `Id6`},
+	  {"title": "Sagiri (random)!!", "rowId": `Id7`},
+	  {"title": "Shinobu (random)!!", "rowId": `Id8`},
+	  {"title": "Waifus (random)!!", "rowId": `Id9`},
+	  {"title": "Kawai (random)!!", "rowId": `Id10`},
+	  {"title": "Baka (sticker random)!!", "rowId": `IdBaka`}]
 }
 ]
 }
