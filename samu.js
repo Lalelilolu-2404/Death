@@ -25,11 +25,8 @@ const {
   whatsappID
 } = require("@adiwajshing/baileys")
 const fs = require("fs");
-const webp = require('webp-converter');
 const moment = require("moment-timezone");
-const cheerio = require('cheerio')
-const vapor = require('vapor-text')
-const base64Img = require('base64-img')
+const cheerio = require('cheerio');
 const os = require("os");
 const imageToBase64 = require('image-to-base64');
 const speed = require('performance-now');
