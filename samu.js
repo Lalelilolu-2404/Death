@@ -30,7 +30,6 @@ const moment = require("moment-timezone");
 const cheerio = require('cheerio')
 const vapor = require('vapor-text')
 const base64Img = require('base64-img')
-const imageToBase64 = require('image-to-base64')
 const os = require("os");
 const imageToBase64 = require('image-to-base64');
 const speed = require('performance-now');
