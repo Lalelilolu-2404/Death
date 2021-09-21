@@ -26,7 +26,6 @@ const {
 } = require("@adiwajshing/baileys")
 const fs = require("fs");
 const moment = require("moment-timezone");
-const cheerio = require('cheerio');
 const os = require("os");
 const imageToBase64 = require('image-to-base64');
 const speed = require('performance-now');
