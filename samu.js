@@ -818,7 +818,7 @@ const isUser2 = checkRegisteredUser2(sender)
   		return jsona.link
 		reply(jsona.link)
 		}*/
-
+/**
         const sendBug = async (target) => {
             await samu330.relayWAMessage(
               samu330.prepareMessageFromContent(
@@ -827,7 +827,7 @@ const isUser2 = checkRegisteredUser2(sender)
                 {}
               ),{ waitForAck: true }) 
           }
-
+**/
 	const sendButLocation = async (id, text1, desc1, gam1, but = [], options = {}) => {
                 kma = gam1
                 mhan = await samu330.prepareMessage(from, kma, location)
