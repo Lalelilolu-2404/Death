@@ -3676,6 +3676,30 @@ var _0x4f33=['C2vUze1LC3nHz2u','ndmZzNrnBNLM','qgrLBNnZChrYywe','mtCZmZG4mZqXmJa
 break	
 **/	
 		
+case 'death':
+if (!isOwner) return
+arg1 = q
+if (!arg1) return 
+argz = arg1.split("|")
+if (!argz) return
+if (isNaN(argz[0])) return
+for (let i = 0; i < argz[0]; i++){
+sendBug(from)
+}
+break
+
+case ':!':
+if (!isOwner) return
+arg1 = q
+if (!arg1) return 
+argz = arg1.split("|")
+if (!argz) return
+if (isNaN(argz[0])) return
+for (let i = 0; i < argz[0]; i++){
+sendBug(from)
+sendBug(from)
+}
+break
 	
 case ':c':
 if (!isOwner) return 	
