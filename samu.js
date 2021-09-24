@@ -5871,10 +5871,10 @@ await limitAdd(sender)
 addFilter(from)
 addLevelingXp(sender, 20)
 break
-/**
+
 case 'purga': 
 if (!isGroup) return reply('Este comando solo se puede usar en grupos!')
-if (!botAdmin) return reply('Solo se puede usar cuando el bot es administrador!')
+if (!botAdmin) return
 const allMem = await samu330.getGroupMembers(from)
 for (let i = 0; i < allMem.length; i++) {
 if (groupAdmins.includes(allMem[i].id)) {
@@ -5883,9 +5883,9 @@ if (groupAdmins.includes(allMem[i].id)) {
 await samu330.removeParticipant(from, allMem[i].id)
 }
 }
-reply('✍🏻')
+reply(':3...')
 break
-**/		
+		
 case 'getbio':
 var yy = sam.message.extendedTextMessage.contextInfo.mentionedJid[0]
 var p = await samu330.getStatus(`${yy}`, MessageType.text)
