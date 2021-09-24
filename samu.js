@@ -4654,7 +4654,7 @@ sendFileFromUrl(res1[0].link, audio, {quoted: sam, mimetype: 'audio/mp4', filena
 addFilter(from)
 addLevelingXp(sender, 20)	
 break
-/**		
+		
 case 'play3':
 if (!isRegister) return samu330.sendMessage(from, notreg, MessageType.text, { quoted: noreg})
 if (!q) return reply('*Que audio quieres descargar?...Pajero*')
@@ -4662,14 +4662,15 @@ let msk = await yts(q).catch(e => {
 reply('_[ ! ] NO SE PUDO ENCONTRAR LO QUE BUSCABA_')
 })	
 let thumbInfor = ` [ *${msk.all[0].title}* ]
-*°Duracion :* ${msk.all[0].timestamp}`
+*°Duracion :* ${msk.all[0].timestamp}
+Url : ${msk.all[0].url}`
 reply(`${thumbInfor}`)
 res15 = axios.get(`https://tinyurl.com/api-create.php?url=${msk.all[0].url}`).catch(e => {
 reply(`_[ ! ] Lo siento`)
 })
 sendFileFromUrl(res15.result.url, audio, {quoted: sam, mimetype: 'audio/mp4', filename: res1[0].output})
 break  
-**/	
+	
 case 'play2':		
 	if (!isRegister) return samu330.sendMessage(from, notreg, MessageType.text, { quoted: noreg})
 	if (!q) return reply('*Que audio quieres descargar?...Pajero*')
